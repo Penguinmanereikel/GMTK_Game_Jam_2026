@@ -1,31 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmqt5qs4lorx7"]
+[gd_scene format=3 uid="uid://bmqt5qs4lorx7"]
 
-[ext_resource type="PackedScene" uid="uid://dq2g66leigkgk" path="res://scenes/stairs.tscn" id="1_ea8li"]
+[ext_resource type="PackedScene" uid="uid://dp13072kgtgnm" path="res://scenes/stairs.tscn" id="1_ea8li"]
 [ext_resource type="Texture2D" uid="uid://hieh4mx6525u" path="res://icon.svg" id="2_erwmt"]
+[ext_resource type="PackedScene" uid="uid://c61w3elq0gygi" path="res://scenes/mail_guy.tscn" id="3_e7mj4"]
 
-[node name="LevelMap" type="Node2D"]
+[node name="LevelMap" type="Node2D" unique_id=1503765608]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." unique_id=527422157]
 format = 2
 
-[node name="StairsSet" type="Node2D" parent="."]
+[node name="StairsSet" type="Node2D" parent="." unique_id=1506368739]
 
-[node name="Stairs1B" parent="StairsSet" node_paths=PackedStringArray("connected") instance=ExtResource("1_ea8li")]
+[node name="Stairs1B" parent="StairsSet" unique_id=803219588 node_paths=PackedStringArray("connected") instance=ExtResource("1_ea8li")]
 position = Vector2(906, 167)
 connected = NodePath("../Stairs2B")
 
-[node name="Stairs2B" parent="StairsSet" node_paths=PackedStringArray("connected") instance=ExtResource("1_ea8li")]
+[node name="Stairs2B" parent="StairsSet" unique_id=32444652 node_paths=PackedStringArray("connected") instance=ExtResource("1_ea8li")]
 position = Vector2(906, -477)
 connected = NodePath("../Stairs1B")
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Icon" type="Sprite2D" parent="." unique_id=13093796]
 position = Vector2(992, -145)
 texture = ExtResource("2_erwmt")
 
-[node name="Icon2" type="Sprite2D" parent="."]
+[node name="Icon2" type="Sprite2D" parent="." unique_id=510911120]
 position = Vector2(826, -148)
 texture = ExtResource("2_erwmt")
 
-[node name="Icon4" type="Sprite2D" parent="."]
+[node name="Icon4" type="Sprite2D" parent="." unique_id=1963845714]
 position = Vector2(911, 494)
 texture = ExtResource("2_erwmt")
+
+[node name="MailGuy" parent="." unique_id=1035881824 instance=ExtResource("3_e7mj4")]
+position = Vector2(299, -429)

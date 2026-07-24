@@ -1,434 +1,436 @@
-[gd_scene load_steps=3 format=3 uid="uid://coytam3efgy20"]
+[gd_scene format=3 uid="uid://coytam3efgy20"]
 
-[ext_resource type="Script" path="res://scripts/minigame_mail.gd" id="1_gpall"]
+[ext_resource type="Script" uid="uid://b6fblt66ynij4" path="res://scripts/minigame_mail.gd" id="1_gpall"]
+[ext_resource type="Theme" uid="uid://dfvqo2s705px3" path="res://scenes/theme.tres" id="2_1j1h4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t147j"]
 size = Vector2(100, 80)
 
-[node name="Minigame_Mail" type="Node2D"]
+[node name="Minigame_Mail" type="Node2D" unique_id=2041814949]
 script = ExtResource("1_gpall")
 
-[node name="Draggables" type="Node2D" parent="."]
+[node name="Draggables" type="Node2D" parent="." unique_id=951697981]
 
-[node name="DragToArea" type="Node2D" parent="."]
+[node name="DragToArea" type="Node2D" parent="." unique_id=394495917]
 metadata/_edit_lock_ = true
 
-[node name="Area2D_A" type="Area2D" parent="DragToArea"]
+[node name="Area2D_A" type="Area2D" parent="DragToArea" unique_id=2065265206]
 position = Vector2(48, 235)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_A"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_A" unique_id=180327971]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_A"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_A" unique_id=366879710]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "A"
 
-[node name="Area2D_B" type="Area2D" parent="DragToArea"]
+[node name="Area2D_B" type="Area2D" parent="DragToArea" unique_id=1554438950]
 position = Vector2(32, 128)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_B"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_B" unique_id=1896601999]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_B"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_B" unique_id=1436782778]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "B"
 
-[node name="Area2D_C" type="Area2D" parent="DragToArea"]
+[node name="Area2D_C" type="Area2D" parent="DragToArea" unique_id=352878029]
 position = Vector2(148, 27)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_C"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_C" unique_id=1333037504]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_C"]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
+[node name="Label" type="Label" parent="DragToArea/Area2D_C" unique_id=712068488]
+offset_left = 5.0
+offset_top = -31.0
+offset_right = 45.0
+offset_bottom = -5.0
+theme = ExtResource("2_1j1h4")
 text = "C"
 
-[node name="Area2D_D" type="Area2D" parent="DragToArea"]
+[node name="Area2D_D" type="Area2D" parent="DragToArea" unique_id=330215034]
 position = Vector2(261, 24)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_D" unique_id=1198484679]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_D"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_D" unique_id=200984872]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "D"
 
-[node name="Area2D_E" type="Area2D" parent="DragToArea"]
+[node name="Area2D_E" type="Area2D" parent="DragToArea" unique_id=1630659181]
 position = Vector2(377, 22)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_E"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_E" unique_id=1444351261]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_E"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_E" unique_id=1130674623]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "E"
 
-[node name="Area2D_F" type="Area2D" parent="DragToArea"]
+[node name="Area2D_F" type="Area2D" parent="DragToArea" unique_id=957725924]
 position = Vector2(506, 21)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_F"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_F" unique_id=2002501135]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_F"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_F" unique_id=2089236795]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "F"
 
-[node name="Area2D_G" type="Area2D" parent="DragToArea"]
+[node name="Area2D_G" type="Area2D" parent="DragToArea" unique_id=20667687]
 position = Vector2(631, 18)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_G"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_G" unique_id=226014686]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_G"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_G" unique_id=2083119263]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "G"
 
-[node name="Area2D_H" type="Area2D" parent="DragToArea"]
+[node name="Area2D_H" type="Area2D" parent="DragToArea" unique_id=737585153]
 position = Vector2(749, 12)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_H"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_H" unique_id=1330619307]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_H"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_H" unique_id=1731839293]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "H"
 
-[node name="Area2D_I" type="Area2D" parent="DragToArea"]
+[node name="Area2D_I" type="Area2D" parent="DragToArea" unique_id=1068858564]
 position = Vector2(868, 26)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_I"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_I" unique_id=1752804938]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_I"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_I" unique_id=372381052]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "I"
 
-[node name="Area2D_J" type="Area2D" parent="DragToArea"]
+[node name="Area2D_J" type="Area2D" parent="DragToArea" unique_id=428615741]
 position = Vector2(988, 31)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_J"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_J" unique_id=986398208]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_J"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_J" unique_id=1277705170]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "J"
 
-[node name="Area2D_K" type="Area2D" parent="DragToArea"]
+[node name="Area2D_K" type="Area2D" parent="DragToArea" unique_id=723620300]
 position = Vector2(1104, 123)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_K"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_K" unique_id=1589805411]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_K"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_K" unique_id=2101371520]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "K"
 
-[node name="Area2D_L" type="Area2D" parent="DragToArea"]
+[node name="Area2D_L" type="Area2D" parent="DragToArea" unique_id=162552491]
 position = Vector2(1116, 219)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_L"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_L" unique_id=1661407191]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_L"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_L" unique_id=979776367]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "L"
 
-[node name="Area2D_M" type="Area2D" parent="DragToArea"]
+[node name="Area2D_M" type="Area2D" parent="DragToArea" unique_id=1116742006]
 position = Vector2(1108, 322)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_M"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_M" unique_id=1364888067]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_M"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_M" unique_id=893047778]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "M"
 
-[node name="Area2D_N" type="Area2D" parent="DragToArea"]
+[node name="Area2D_N" type="Area2D" parent="DragToArea" unique_id=1571079519]
 position = Vector2(1112, 421)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_N"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_N" unique_id=164292894]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_N"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_N" unique_id=705945027]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "N"
 
-[node name="Area2D_O" type="Area2D" parent="DragToArea"]
+[node name="Area2D_O" type="Area2D" parent="DragToArea" unique_id=26884079]
 position = Vector2(1112, 510)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_O"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_O" unique_id=727907397]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_O"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_O" unique_id=1235595832]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "O"
 
-[node name="Area2D_P" type="Area2D" parent="DragToArea"]
+[node name="Area2D_P" type="Area2D" parent="DragToArea" unique_id=1662380135]
 position = Vector2(1036, 617)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_P"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_P" unique_id=644053553]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_P"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_P" unique_id=147948499]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "P"
 
-[node name="Area2D_Q" type="Area2D" parent="DragToArea"]
+[node name="Area2D_Q" type="Area2D" parent="DragToArea" unique_id=304635143]
 position = Vector2(891, 620)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_Q"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_Q" unique_id=1417114374]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_Q"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_Q" unique_id=812962398]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "Q"
 
-[node name="Area2D_R" type="Area2D" parent="DragToArea"]
+[node name="Area2D_R" type="Area2D" parent="DragToArea" unique_id=186581740]
 position = Vector2(765, 615)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_R"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_R" unique_id=808780218]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_R"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_R" unique_id=1730081124]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "R"
 
-[node name="Area2D_S" type="Area2D" parent="DragToArea"]
+[node name="Area2D_S" type="Area2D" parent="DragToArea" unique_id=504519181]
 position = Vector2(650, 613)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_S"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_S" unique_id=325867132]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_S"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_S" unique_id=823700499]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "S"
 
-[node name="Area2D_T" type="Area2D" parent="DragToArea"]
+[node name="Area2D_T" type="Area2D" parent="DragToArea" unique_id=256765087]
 position = Vector2(532, 614)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_T"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_T" unique_id=690826273]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_T"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_T" unique_id=1322506206]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "T"
 
-[node name="Area2D_U" type="Area2D" parent="DragToArea"]
+[node name="Area2D_U" type="Area2D" parent="DragToArea" unique_id=440653296]
 position = Vector2(412, 626)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_U"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_U" unique_id=177157038]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_U"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_U" unique_id=898803857]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "U"
 
-[node name="Area2D_V" type="Area2D" parent="DragToArea"]
+[node name="Area2D_V" type="Area2D" parent="DragToArea" unique_id=868630774]
 position = Vector2(277, 622)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_V"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_V" unique_id=1655849993]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_V"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_V" unique_id=1437018794]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "V"
 
-[node name="Area2D_W" type="Area2D" parent="DragToArea"]
+[node name="Area2D_W" type="Area2D" parent="DragToArea" unique_id=1423802600]
 position = Vector2(152, 630)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_W"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_W" unique_id=1468124007]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_W"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_W" unique_id=430060133]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "W"
 
-[node name="Area2D_X" type="Area2D" parent="DragToArea"]
+[node name="Area2D_X" type="Area2D" parent="DragToArea" unique_id=145804824]
 position = Vector2(45, 544)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_X"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_X" unique_id=276408516]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_X"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_X" unique_id=1267787920]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "X"
 
-[node name="Area2D_Y" type="Area2D" parent="DragToArea"]
+[node name="Area2D_Y" type="Area2D" parent="DragToArea" unique_id=2112173396]
 position = Vector2(48, 454)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_Y"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_Y" unique_id=33662061]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_Y"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_Y" unique_id=485991924]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "Y"
 
-[node name="Area2D_Z" type="Area2D" parent="DragToArea"]
+[node name="Area2D_Z" type="Area2D" parent="DragToArea" unique_id=956302847]
 position = Vector2(49, 342)
 collision_layer = 8
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_Z"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_Z" unique_id=1758062582]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_Z"]
+[node name="Label" type="Label" parent="DragToArea/Area2D_Z" unique_id=1357820771]
 offset_left = 4.0
 offset_top = -7.0
 offset_right = 44.0
 offset_bottom = 19.0
 text = "Z"
 
-[node name="Marker_TL" type="Marker2D" parent="."]
+[node name="Marker_TL" type="Marker2D" parent="." unique_id=413127186]
 position = Vector2(198, 156)
 
-[node name="Marker_BR" type="Marker2D" parent="."]
+[node name="Marker_BR" type="Marker2D" parent="." unique_id=349732928]
 position = Vector2(947, 486)

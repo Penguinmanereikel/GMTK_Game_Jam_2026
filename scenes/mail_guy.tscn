@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c61w3elq0gygi"]
+
+[ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_nw8oy"]
+[ext_resource type="Script" uid="uid://bxppcue25gmci" path="res://scripts/mail_guy.gd" id="2_8l6x0"]
+[ext_resource type="Texture2D" uid="uid://hieh4mx6525u" path="res://icon.svg" id="2_70wbb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70wbb"]
+size = Vector2(444, 192.5)
+
+[node name="MailGuy" unique_id=803219588 instance=ExtResource("1_nw8oy")]
+script = ExtResource("2_8l6x0")
+
+[node name="Sprite2D" parent="." index="0" unique_id=404344015]
+texture = ExtResource("2_70wbb")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
+position = Vector2(0, 96.25)
+shape = SubResource("RectangleShape2D_70wbb")
+
+[node name="Control" parent="." index="4" unique_id=1289585158]
+metadata/_edit_lock_ = true
+
+[node name="Label" parent="Control" index="0" unique_id=529532953]
+text = "Talk
+Space"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true

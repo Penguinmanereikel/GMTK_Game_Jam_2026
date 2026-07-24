@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://dyqrywaunyn1d"]
+
+[ext_resource type="Theme" uid="uid://dfvqo2s705px3" path="res://scenes/theme.tres" id="1_56v82"]
+[ext_resource type="Script" uid="uid://ik1sslsbfyfh" path="res://scripts/interactable.gd" id="1_ij5l6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_prmf7"]
+
+[sub_resource type="Animation" id="Animation_3aalw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-31, -69)]
+}
+
+[sub_resource type="Animation" id="Animation_56v82"]
+resource_name = "move"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(-61.5, -93), Vector2(-61.5, -113), Vector2(-61.5, -93)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ij5l6"]
+_data = {
+&"RESET": SubResource("Animation_3aalw"),
+&"move": SubResource("Animation_56v82")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_prmf7"]
+font_size = 32
+
+[node name="Interactable" type="Node2D" unique_id=803219588]
+script = ExtResource("1_ij5l6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=404344015]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=437311791]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=585417938]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=753043864]
+shape = SubResource("RectangleShape2D_prmf7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=463374329]
+active = false
+libraries/ = SubResource("AnimationLibrary_ij5l6")
+
+[node name="Control" type="Control" parent="." unique_id=1289585158]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -61.5
+offset_top = -93.0
+offset_right = 61.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Control" unique_id=529532953]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -93.0
+offset_right = 61.0
+offset_bottom = 0.00010681152
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_56v82")
+text = "Interact
+Space"
+label_settings = SubResource("LabelSettings_prmf7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Control/Label" unique_id=129326617]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_make_active"]
+[connection signal="body_exited" from="Area2D" to="." method="_make_inactive"]

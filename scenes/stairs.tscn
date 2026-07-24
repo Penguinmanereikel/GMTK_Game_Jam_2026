@@ -1,26 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://dq2g66leigkgk"]
+[gd_scene format=3 uid="uid://dp13072kgtgnm"]
 
-[ext_resource type="Script" path="res://scripts/stairs.gd" id="1_oeduy"]
+[ext_resource type="Script" uid="uid://b5hfpqirqmxmj" path="res://scripts/stairs.gd" id="1_oeduy"]
+[ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_qpode"]
 [ext_resource type="Texture2D" uid="uid://hieh4mx6525u" path="res://icon.svg" id="2_rgmr4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4q3t"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8gvg"]
 size = Vector2(120, 210)
 
-[node name="Stairs" type="Node2D"]
+[node name="Stairs" unique_id=803219588 instance=ExtResource("1_qpode")]
 script = ExtResource("1_oeduy")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" parent="." index="0" unique_id=404344015]
 texture = ExtResource("2_rgmr4")
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
 position = Vector2(0, 140)
-shape = SubResource("RectangleShape2D_a4q3t")
+shape = SubResource("RectangleShape2D_t8gvg")
 
-[node name="Marker2D" type="Marker2D" parent="."]
+[node name="Label" parent="Control" parent_id_path=PackedInt32Array(1289585158) index="0" unique_id=529532953]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -92.5
+offset_right = 75.5
+text = "Take Stairs
+Space"
+
+[node name="Marker2D" type="Marker2D" parent="." index="5" unique_id=1625290300]
 position = Vector2(1.42109e-14, 204)
-
-[connection signal="body_entered" from="Area2D" to="." method="_make_active"]
-[connection signal="body_exited" from="Area2D" to="." method="_make_inactive"]
