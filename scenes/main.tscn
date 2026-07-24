@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3as2fy1vwf6t"]
+
+[ext_resource type="PackedScene" uid="uid://dfocqnhhyouuj" path="res://scenes/player.tscn" id="1_iu00y"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_jl6yo"]
+[ext_resource type="PackedScene" uid="uid://bmqt5qs4lorx7" path="res://scenes/level_map.tscn" id="1_qtxt0"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_jl6yo")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="LevelMap" parent="." instance=ExtResource("1_qtxt0")]
+position = Vector2(-388, -371)
+
+[node name="Player" parent="." instance=ExtResource("1_iu00y")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]

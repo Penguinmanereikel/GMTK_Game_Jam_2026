@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmqt5qs4lorx7"]
+
+[ext_resource type="PackedScene" uid="uid://dq2g66leigkgk" path="res://scenes/stairs.tscn" id="1_ea8li"]
+[ext_resource type="Texture2D" uid="uid://hieh4mx6525u" path="res://icon.svg" id="2_erwmt"]
+
+[node name="LevelMap" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="StairsSet" type="Node2D" parent="."]
+
+[node name="Stairs1B" parent="StairsSet" node_paths=PackedStringArray("connected") instance=ExtResource("1_ea8li")]
+position = Vector2(906, 167)
+connected = NodePath("../Stairs2B")
+
+[node name="Stairs2B" parent="StairsSet" node_paths=PackedStringArray("connected") instance=ExtResource("1_ea8li")]
+position = Vector2(906, -477)
+connected = NodePath("../Stairs1B")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(992, -145)
+texture = ExtResource("2_erwmt")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(826, -148)
+texture = ExtResource("2_erwmt")
+
+[node name="Icon4" type="Sprite2D" parent="."]
+position = Vector2(911, 494)
+texture = ExtResource("2_erwmt")
