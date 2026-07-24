@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://chpj8emslpsjo"]
 
 [ext_resource type="PackedScene" uid="uid://04irh3q4kcxq" path="res://scenes/draggable.tscn" id="1_vx6gs"]
-[ext_resource type="Script" path="res://scenes/mail.gd" id="2_ayuli"]
+[ext_resource type="Script" path="res://scripts/mail.gd" id="2_ls3ft"]
 [ext_resource type="Texture2D" uid="uid://hieh4mx6525u" path="res://icon.svg" id="2_wx7h4"]
 
 [node name="Mail" instance=ExtResource("1_vx6gs")]
-script = ExtResource("2_ayuli")
+script = ExtResource("2_ls3ft")
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(2.25, -1.25)
