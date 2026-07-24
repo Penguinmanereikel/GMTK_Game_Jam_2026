@@ -1,0 +1,434 @@
+[gd_scene load_steps=3 format=3 uid="uid://coytam3efgy20"]
+
+[ext_resource type="Script" path="res://scripts/minigame_mail.gd" id="1_gpall"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t147j"]
+size = Vector2(100, 80)
+
+[node name="Minigame_Mail" type="Node2D"]
+script = ExtResource("1_gpall")
+
+[node name="Draggables" type="Node2D" parent="."]
+
+[node name="DragToArea" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Area2D_A" type="Area2D" parent="DragToArea"]
+position = Vector2(48, 235)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_A"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_A"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "A"
+
+[node name="Area2D_B" type="Area2D" parent="DragToArea"]
+position = Vector2(32, 128)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_B"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_B"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "B"
+
+[node name="Area2D_C" type="Area2D" parent="DragToArea"]
+position = Vector2(148, 27)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_C"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_C"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "C"
+
+[node name="Area2D_D" type="Area2D" parent="DragToArea"]
+position = Vector2(261, 24)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_D"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_D"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "D"
+
+[node name="Area2D_E" type="Area2D" parent="DragToArea"]
+position = Vector2(377, 22)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_E"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_E"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "E"
+
+[node name="Area2D_F" type="Area2D" parent="DragToArea"]
+position = Vector2(506, 21)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_F"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_F"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "F"
+
+[node name="Area2D_G" type="Area2D" parent="DragToArea"]
+position = Vector2(631, 18)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_G"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_G"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "G"
+
+[node name="Area2D_H" type="Area2D" parent="DragToArea"]
+position = Vector2(749, 12)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_H"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_H"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "H"
+
+[node name="Area2D_I" type="Area2D" parent="DragToArea"]
+position = Vector2(868, 26)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_I"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_I"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "I"
+
+[node name="Area2D_J" type="Area2D" parent="DragToArea"]
+position = Vector2(988, 31)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_J"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_J"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "J"
+
+[node name="Area2D_K" type="Area2D" parent="DragToArea"]
+position = Vector2(1104, 123)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_K"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_K"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "K"
+
+[node name="Area2D_L" type="Area2D" parent="DragToArea"]
+position = Vector2(1116, 219)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_L"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_L"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "L"
+
+[node name="Area2D_M" type="Area2D" parent="DragToArea"]
+position = Vector2(1108, 322)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_M"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_M"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "M"
+
+[node name="Area2D_N" type="Area2D" parent="DragToArea"]
+position = Vector2(1112, 421)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_N"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_N"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "N"
+
+[node name="Area2D_O" type="Area2D" parent="DragToArea"]
+position = Vector2(1112, 510)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_O"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_O"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "O"
+
+[node name="Area2D_P" type="Area2D" parent="DragToArea"]
+position = Vector2(1036, 617)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_P"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_P"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "P"
+
+[node name="Area2D_Q" type="Area2D" parent="DragToArea"]
+position = Vector2(891, 620)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_Q"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_Q"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "Q"
+
+[node name="Area2D_R" type="Area2D" parent="DragToArea"]
+position = Vector2(765, 615)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_R"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_R"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "R"
+
+[node name="Area2D_S" type="Area2D" parent="DragToArea"]
+position = Vector2(650, 613)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_S"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_S"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "S"
+
+[node name="Area2D_T" type="Area2D" parent="DragToArea"]
+position = Vector2(532, 614)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_T"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_T"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "T"
+
+[node name="Area2D_U" type="Area2D" parent="DragToArea"]
+position = Vector2(412, 626)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_U"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_U"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "U"
+
+[node name="Area2D_V" type="Area2D" parent="DragToArea"]
+position = Vector2(277, 622)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_V"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_V"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "V"
+
+[node name="Area2D_W" type="Area2D" parent="DragToArea"]
+position = Vector2(152, 630)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_W"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_W"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "W"
+
+[node name="Area2D_X" type="Area2D" parent="DragToArea"]
+position = Vector2(45, 544)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_X"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_X"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "X"
+
+[node name="Area2D_Y" type="Area2D" parent="DragToArea"]
+position = Vector2(48, 454)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_Y"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_Y"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "Y"
+
+[node name="Area2D_Z" type="Area2D" parent="DragToArea"]
+position = Vector2(49, 342)
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_Z"]
+shape = SubResource("RectangleShape2D_t147j")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="DragToArea/Area2D_Z"]
+offset_left = 4.0
+offset_top = -7.0
+offset_right = 44.0
+offset_bottom = 19.0
+text = "Z"
+
+[node name="Marker_TL" type="Marker2D" parent="."]
+position = Vector2(198, 156)
+
+[node name="Marker_BR" type="Marker2D" parent="."]
+position = Vector2(947, 486)

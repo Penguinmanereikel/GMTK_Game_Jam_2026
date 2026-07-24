@@ -40,6 +40,22 @@ Interact={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="SkyBackground"
+2d_render/layer_2="LevelBackground"
+2d_render/layer_3="LevelMidground"
+2d_render/layer_4="Player"
+2d_render/layer_5="Foreground"
+2d_render/layer_6="Minigame"
+2d_render/layer_7="UI"
+2d_render/layer_8="Pause"
+2d_render/layer_9="Menu"
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Interactables"
+2d_physics/layer_3="Dragables"
+2d_physics/layer_4="DragToAreas"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
