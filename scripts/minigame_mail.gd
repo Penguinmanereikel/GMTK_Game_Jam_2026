@@ -1,5 +1,7 @@
 extends Node2D
 
+signal end_minigame(id)
+
 var curr_dragging: Node2D = null
 var dragToAreaDict: Dictionary = {}
 
@@ -76,7 +78,7 @@ func start():
 	print("Start")
 	
 func finish():
-	print("Win")
+	end_minigame.emit("MailRoom")
 	
 func check_finish_condition():
 	if stored_away >= total_to_store:

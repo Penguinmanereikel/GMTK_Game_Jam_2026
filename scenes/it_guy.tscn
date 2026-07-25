@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cnwyuh3lwwlfm"]
+
+[ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_rtjlp"]
+[ext_resource type="Script" uid="uid://cv81esk4hmqm" path="res://scripts/it_guy.gd" id="2_j30kr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j30kr"]
+size = Vector2(187, 175)
+
+[node name="ITGuy" unique_id=803219588 groups=["ConversationStarters", "Interactables"] instance=ExtResource("1_rtjlp")]
+script = ExtResource("2_j30kr")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
+position = Vector2(-0.5, 77.5)
+shape = SubResource("RectangleShape2D_j30kr")
+
+[node name="Label" parent="Control" parent_id_path=PackedInt32Array(1289585158) index="0" unique_id=529532953]
+text = "Talk
+Space"

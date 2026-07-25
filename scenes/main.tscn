@@ -4,7 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bmqt5qs4lorx7" path="res://scenes/level_map.tscn" id="1_qtxt0"]
 [ext_resource type="Script" uid="uid://cc0rlfgt41b7h" path="res://scripts/main.gd" id="1_yk4e7"]
 [ext_resource type="PackedScene" uid="uid://wv6jnti57848" path="res://scenes/dialogue_box.tscn" id="4_jyhfs"]
-[ext_resource type="Texture2D" uid="uid://bud0tbvg7ccb0" path="res://assets/OfficeTileset.png" id="4_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://coytam3efgy20" path="res://scenes/minigame_mail.tscn" id="5_tefeu"]
+[ext_resource type="PackedScene" uid="uid://cwsysoso8cw8q" path="res://scenes/minigame_card.tscn" id="6_o6xl0"]
 
 [node name="Main" type="Node2D" unique_id=311123939]
 script = ExtResource("1_yk4e7")
@@ -15,12 +16,23 @@ layer = -1
 [node name="LevelMap" parent="." unique_id=1677544978 instance=ExtResource("1_qtxt0")]
 
 [node name="Player" parent="." unique_id=557363118 instance=ExtResource("1_iu00y")]
-position = Vector2(597, 2048)
+position = Vector2(582, 2048)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=111282740]
 position = Vector2(0, -97)
+metadata/_edit_lock_ = true
 
 [node name="Conversation" type="CanvasLayer" parent="." unique_id=2021424479]
 
 [node name="DialogueBox" parent="Conversation" unique_id=772792991 instance=ExtResource("4_jyhfs")]
 position = Vector2(575, 789)
+
+[node name="Minigame" type="CanvasLayer" parent="." unique_id=1242330759]
+layer = 2
+
+[node name="Minigame_Mail" parent="Minigame" unique_id=2041814949 instance=ExtResource("5_tefeu")]
+
+[node name="Minigame_Card" parent="Minigame" unique_id=76280558 instance=ExtResource("6_o6xl0")]
+
+[connection signal="end_dialogue" from="Conversation/DialogueBox" to="." method="end_dialogue"]
+[connection signal="start_minigame" from="Conversation/DialogueBox" to="." method="start_minigame"]

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bxrki7svw0tnp"]
+
+[ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_h1dpw"]
+[ext_resource type="Script" uid="uid://13imuow76q31" path="res://scripts/mechanic.gd" id="2_qa1uj"]
+[ext_resource type="Texture2D" uid="uid://hieh4mx6525u" path="res://icon.svg" id="3_abs1k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qa1uj"]
+size = Vector2(356, 265)
+
+[node name="Mechanic" unique_id=803219588 groups=["ConversationStarters", "Interactables"] instance=ExtResource("1_h1dpw")]
+script = ExtResource("2_qa1uj")
+
+[node name="Sprite2D" parent="." index="0" unique_id=404344015]
+texture = ExtResource("3_abs1k")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
+position = Vector2(0, 122.5)
+shape = SubResource("RectangleShape2D_qa1uj")
+
+[node name="Label" parent="Control" parent_id_path=PackedInt32Array(1289585158) index="0" unique_id=529532953]
+text = "Talk
+Space"
