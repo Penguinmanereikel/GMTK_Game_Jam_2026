@@ -21,4 +21,4 @@ position = Vector2(572, 334)
 [node name="Conversation" type="CanvasLayer" parent="." unique_id=2021424479]
 
 [node name="DialogueBox" parent="Conversation" unique_id=772792991 instance=ExtResource("4_jyhfs")]
-position = Vector2(575, 539)
+position = Vector2(575, 789)
