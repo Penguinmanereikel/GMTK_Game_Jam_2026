@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://8hwwtkb85ktr"
-path="res://.godot/imported/NASA.ttf-a8da67cfb22e12c4e7e7586909c1f438.fontdata"
+uid="uid://umfexeb0puqf"
+path="res://.godot/imported/NASA(3).ttf-a0007d8c0b869fd22637e32221943169.fontdata"
 
 [deps]
 
-source_file="res://font/NASA.ttf"
-dest_files=["res://.godot/imported/NASA.ttf-a8da67cfb22e12c4e7e7586909c1f438.fontdata"]
+source_file="res://font/NASA(3).ttf"
+dest_files=["res://.godot/imported/NASA(3).ttf-a0007d8c0b869fd22637e32221943169.fontdata"]
 
 [params]
 
@@ -22,8 +22,8 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false
-hinting=1
-subpixel_positioning=1
+hinting=3
+subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
