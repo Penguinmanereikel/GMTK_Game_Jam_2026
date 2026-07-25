@@ -2,6 +2,57 @@
 
 [ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_rtjlp"]
 [ext_resource type="Script" uid="uid://cv81esk4hmqm" path="res://scripts/it_guy.gd" id="2_j30kr"]
+[ext_resource type="Texture2D" uid="uid://dh1uvpswtoaym" path="res://spritesheets/ITidle.png" id="3_krld5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7k6b"]
+atlas = ExtResource("3_krld5")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6qrm"]
+atlas = ExtResource("3_krld5")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phvqf"]
+atlas = ExtResource("3_krld5")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_on1lm"]
+atlas = ExtResource("3_krld5")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65aby"]
+atlas = ExtResource("3_krld5")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvcqm"]
+atlas = ExtResource("3_krld5")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f3gxq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7k6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6qrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phvqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_on1lm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65aby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvcqm")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 8.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j30kr"]
 size = Vector2(187, 175)
@@ -9,10 +60,28 @@ size = Vector2(187, 175)
 [node name="ITGuy" unique_id=803219588 groups=["ConversationStarters"] instance=ExtResource("1_rtjlp")]
 script = ExtResource("2_j30kr")
 
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=437311791]
+position = Vector2(0, 76)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_f3gxq")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.8961919
+
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
-position = Vector2(-0.5, 77.5)
+position = Vector2(0, 75)
 shape = SubResource("RectangleShape2D_j30kr")
 
-[node name="Label" parent="Control" parent_id_path=PackedInt32Array(1289585158) index="0" unique_id=529532953]
+[node name="Control" parent="." index="4" unique_id=1289585158]
+offset_left = -59.0
+offset_top = -112.0
+offset_right = 64.0
+offset_bottom = -19.0
+
+[node name="Label" parent="Control" index="0" unique_id=529532953]
+offset_left = -64.5
+offset_top = -91.0
+offset_right = 58.5
+offset_bottom = 2.0001068
 text = "Talk
 [Space]"
