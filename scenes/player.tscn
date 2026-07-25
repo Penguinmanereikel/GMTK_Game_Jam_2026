@@ -123,6 +123,9 @@ scale = Vector2(0.20593613, 0.1641734)
 shape = SubResource("RectangleShape2D_5w473")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1637558953]
+texture_filter = 1
+scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_715ky")
-animation = &"Idle"
-frame_progress = 0.023226772
+animation = &"Walk"
+autoplay = "Idle"
+frame_progress = 0.97421765
