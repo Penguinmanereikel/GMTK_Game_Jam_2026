@@ -55,21 +55,25 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j30kr"]
-size = Vector2(187, 175)
+size = Vector2(187, 240)
 
 [node name="ITGuy" unique_id=803219588 groups=["ConversationStarters"] instance=ExtResource("1_rtjlp")]
 script = ExtResource("2_j30kr")
 
+[node name="Sprite2D" parent="." index="0" unique_id=404344015]
+texture_filter = 1
+
 [node name="AnimatedSprite2D" parent="." index="1" unique_id=437311791]
+texture_filter = 1
 position = Vector2(0, 76)
-scale = Vector2(5, 5)
+scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_f3gxq")
 animation = &"Idle"
 autoplay = "Idle"
 frame_progress = 0.8961919
 
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
-position = Vector2(0, 75)
+position = Vector2(0, 85)
 shape = SubResource("RectangleShape2D_j30kr")
 
 [node name="Control" parent="." index="4" unique_id=1289585158]
@@ -79,6 +83,7 @@ offset_right = 64.0
 offset_bottom = -19.0
 
 [node name="Label" parent="Control" index="0" unique_id=529532953]
+texture_filter = 1
 offset_left = -64.5
 offset_top = -91.0
 offset_right = 58.5

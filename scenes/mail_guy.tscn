@@ -3,6 +3,57 @@
 [ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_nw8oy"]
 [ext_resource type="Script" uid="uid://bxppcue25gmci" path="res://scripts/mail_guy.gd" id="2_8l6x0"]
 [ext_resource type="Texture2D" uid="uid://hieh4mx6525u" path="res://icon.svg" id="2_70wbb"]
+[ext_resource type="Texture2D" uid="uid://dhw4xu2qxa8ki" path="res://spritesheets/Mailidle.png" id="4_8l6x0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40ft5"]
+atlas = ExtResource("4_8l6x0")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qilf7"]
+atlas = ExtResource("4_8l6x0")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cc2h"]
+atlas = ExtResource("4_8l6x0")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iuotb"]
+atlas = ExtResource("4_8l6x0")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgy44"]
+atlas = ExtResource("4_8l6x0")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc0xn"]
+atlas = ExtResource("4_8l6x0")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_upmje"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40ft5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qilf7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cc2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iuotb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgy44")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lc0xn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 9.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_70wbb"]
 size = Vector2(444, 192.5)
@@ -12,6 +63,14 @@ script = ExtResource("2_8l6x0")
 
 [node name="Sprite2D" parent="." index="0" unique_id=404344015]
 texture = ExtResource("2_70wbb")
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=437311791]
+texture_filter = 1
+position = Vector2(3, 66)
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_upmje")
+autoplay = "default"
+frame_progress = 0.56250054
 
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
 position = Vector2(0, 96.25)
