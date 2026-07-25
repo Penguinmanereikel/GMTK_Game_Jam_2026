@@ -11,23 +11,23 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	dir = 0
-	if Input.is_action_pressed("Left"):
-		dir -= 1
-	if Input.is_action_pressed("Right"):
-		dir += 1
-	
-	print(dir)
-	print((playerSpeed * delta) * dir)
-	self.position.x += (playerSpeed * delta) * dir
-	
-	if dir == 0:
-		$AnimatedSprite2D.play('Idle')
-	elif dir < 0:
-		if scale.x > 0:
-			scale.x *= -1
-		$AnimatedSprite2D.play("Walk")
-	elif dir > 0:
-		if scale.x < 0:
-			scale.x *= -1
-		$AnimatedSprite2D.play("Walk")
+	if Globals.dialogue_open == false and Globals.minigame_open == false:
+		if Input.is_action_pressed("Left"):
+			dir -= 1
+		if Input.is_action_pressed("Right"):
+			dir += 1
+		
+		#print((playerSpeed * delta) * dir)
+		velocity.x = playerSpeed * dir
+		move_and_slide()
+		
+		#print("DIR: ", dir)
+		if dir == 0:
+			$AnimatedSprite2D.play('Idle')
+		elif dir < 0:
+			scale.x = -1
+			$AnimatedSprite2D.play("Walk")
+		elif dir > 0:
+			scale.x = 1
+			$AnimatedSprite2D.play("Walk")
 	
