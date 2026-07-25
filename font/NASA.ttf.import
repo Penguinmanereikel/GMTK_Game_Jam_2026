@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://8hwwtkb85ktr"
+uid="uid://dvmc74ufeglux"
 path="res://.godot/imported/NASA.ttf-a8da67cfb22e12c4e7e7586909c1f438.fontdata"
 
 [deps]
@@ -22,8 +22,8 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false
-hinting=1
-subpixel_positioning=1
+hinting=3
+subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null

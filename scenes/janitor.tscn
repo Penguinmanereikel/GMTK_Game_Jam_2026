@@ -2,12 +2,69 @@
 
 [ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_qe0e1"]
 [ext_resource type="Script" uid="uid://bvx2kdhqolv6h" path="res://scripts/janitor.gd" id="2_0wvpv"]
+[ext_resource type="Texture2D" uid="uid://buctfwtniulay" path="res://spritesheets/Janitoridle.png" id="3_0l40l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rcxs"]
+atlas = ExtResource("3_0l40l")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkojd"]
+atlas = ExtResource("3_0l40l")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f27pe"]
+atlas = ExtResource("3_0l40l")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0f3df"]
+atlas = ExtResource("3_0l40l")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ua0x"]
+atlas = ExtResource("3_0l40l")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyhea"]
+atlas = ExtResource("3_0l40l")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tipki"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rcxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkojd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f27pe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0f3df")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ua0x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyhea")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qe0e1"]
 size = Vector2(230, 227)
 
 [node name="Janitor" unique_id=803219588 groups=["ConversationStarters"] instance=ExtResource("1_qe0e1")]
 script = ExtResource("2_0wvpv")
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=437311791]
+texture_filter = 1
+position = Vector2(1, 91)
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_tipki")
 
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
 position = Vector2(0, 103.5)

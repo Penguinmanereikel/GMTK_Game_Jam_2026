@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://wv6jnti57848" path="res://scenes/dialogue_box.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://coytam3efgy20" path="res://scenes/minigame_mail.tscn" id="5_tefeu"]
 [ext_resource type="PackedScene" uid="uid://cwsysoso8cw8q" path="res://scenes/minigame_card.tscn" id="6_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://cnwyuh3lwwlfm" path="res://scenes/it_guy.tscn" id="7_o6xl0"]
 
 [node name="Main" type="Node2D" unique_id=311123939]
 script = ExtResource("1_yk4e7")
@@ -31,8 +32,12 @@ position = Vector2(575, 789)
 layer = 2
 
 [node name="Minigame_Mail" parent="Minigame" unique_id=2041814949 instance=ExtResource("5_tefeu")]
+visible = false
 
 [node name="Minigame_Card" parent="Minigame" unique_id=76280558 instance=ExtResource("6_o6xl0")]
+
+[node name="ITGuy" parent="." unique_id=803219588 instance=ExtResource("7_o6xl0")]
+position = Vector2(774, 1972)
 
 [connection signal="end_dialogue" from="Conversation/DialogueBox" to="." method="end_dialogue"]
 [connection signal="start_minigame" from="Conversation/DialogueBox" to="." method="start_minigame"]

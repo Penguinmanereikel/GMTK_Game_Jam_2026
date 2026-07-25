@@ -2,12 +2,20 @@
 
 [ext_resource type="Script" uid="uid://b6fblt66ynij4" path="res://scripts/minigame_mail.gd" id="1_gpall"]
 [ext_resource type="Theme" uid="uid://dfvqo2s705px3" path="res://scenes/theme.tres" id="2_1j1h4"]
+[ext_resource type="Texture2D" uid="uid://dukkkcjfn34sx" path="res://assets/MiniGameTable.png" id="2_cpsol"]
+[ext_resource type="Texture2D" uid="uid://ckn6eyehifo0u" path="res://assets/FileBox.png" id="3_ae2cl"]
+[ext_resource type="FontFile" uid="uid://dvmc74ufeglux" path="res://font/NASA.ttf" id="4_hkm2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t147j"]
 size = Vector2(100, 80)
 
 [node name="Minigame_Mail" type="Node2D" unique_id=2041814949]
 script = ExtResource("1_gpall")
+
+[node name="MiniGameTable" type="Sprite2D" parent="." unique_id=1767481339]
+position = Vector2(581, 335.00003)
+scale = Vector2(2.8575, 2.762931)
+texture = ExtResource("2_cpsol")
 
 [node name="Draggables" type="Node2D" parent="." unique_id=951697981]
 
@@ -19,13 +27,21 @@ position = Vector2(48, 235)
 collision_layer = 8
 collision_mask = 4
 
+[node name="BoxA" type="Sprite2D" parent="DragToArea/Area2D_A" unique_id=1044758012]
+texture = ExtResource("3_ae2cl")
+flip_h = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_A" unique_id=180327971]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="DragToArea/Area2D_A" unique_id=366879710]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -25.0
+offset_top = 4.0
+offset_right = -14.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
 text = "A"
 
 [node name="Area2D_B" type="Area2D" parent="DragToArea" unique_id=1554438950]
@@ -33,384 +49,507 @@ position = Vector2(32, 128)
 collision_layer = 8
 collision_mask = 4
 
+[node name="BoxB" type="Sprite2D" parent="DragToArea/Area2D_B" unique_id=763436744]
+texture = ExtResource("3_ae2cl")
+flip_h = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_B" unique_id=1896601999]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="DragToArea/Area2D_B" unique_id=1436782778]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
+offset_left = -15.0
+offset_top = 8.0
+offset_right = 25.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
 text = "B"
 
 [node name="Area2D_C" type="Area2D" parent="DragToArea" unique_id=352878029]
-position = Vector2(148, 27)
+position = Vector2(49, 38)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxC" type="Sprite2D" parent="DragToArea/Area2D_C" unique_id=1252966768]
+position = Vector2(6, 3)
+texture = ExtResource("3_ae2cl")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_C" unique_id=1333037504]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="DragToArea/Area2D_C" unique_id=712068488]
-offset_left = 5.0
-offset_top = -31.0
-offset_right = 45.0
-offset_bottom = -5.0
+offset_left = -15.0
+offset_top = 11.0
+offset_right = 25.0
+offset_bottom = 37.0
 theme = ExtResource("2_1j1h4")
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
 text = "C"
 
 [node name="Area2D_D" type="Area2D" parent="DragToArea" unique_id=330215034]
-position = Vector2(261, 24)
+position = Vector2(170, 40)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxD" type="Sprite2D" parent="DragToArea/Area2D_D" unique_id=2052986215]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_D" unique_id=1198484679]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="DragToArea/Area2D_D" unique_id=200984872]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
+offset_left = 13.0
+offset_top = 6.0
+offset_right = 53.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
 text = "D"
 
 [node name="Area2D_E" type="Area2D" parent="DragToArea" unique_id=1630659181]
-position = Vector2(377, 22)
+position = Vector2(285, 38)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxE" type="Sprite2D" parent="DragToArea/Area2D_E" unique_id=177938450]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_E" unique_id=1444351261]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="DragToArea/Area2D_E" unique_id=1130674623]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 52.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
 text = "E"
 
 [node name="Area2D_F" type="Area2D" parent="DragToArea" unique_id=957725924]
-position = Vector2(506, 21)
+position = Vector2(419, 38)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxF" type="Sprite2D" parent="DragToArea/Area2D_F" unique_id=1869375813]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_F" unique_id=2002501135]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="DragToArea/Area2D_F" unique_id=2089236795]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
+offset_left = 14.0
+offset_top = 7.0
+offset_right = 54.0
+offset_bottom = 33.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
 text = "F"
 
 [node name="Area2D_G" type="Area2D" parent="DragToArea" unique_id=20667687]
-position = Vector2(631, 18)
+position = Vector2(534, 42)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxG" type="Sprite2D" parent="DragToArea/Area2D_G" unique_id=290746583]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_G" unique_id=226014686]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="DragToArea/Area2D_G" unique_id=2083119263]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
 text = "G"
 
 [node name="Area2D_H" type="Area2D" parent="DragToArea" unique_id=737585153]
-position = Vector2(749, 12)
+position = Vector2(648, 43)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxH" type="Sprite2D" parent="DragToArea/Area2D_H" unique_id=1747494492]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_H" unique_id=1330619307]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_H" unique_id=1731839293]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
+[node name="Label" type="Label" parent="DragToArea/Area2D_H" unique_id=173764524]
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
 text = "H"
 
 [node name="Area2D_I" type="Area2D" parent="DragToArea" unique_id=1068858564]
-position = Vector2(868, 26)
+position = Vector2(768, 44)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxI" type="Sprite2D" parent="DragToArea/Area2D_I" unique_id=1291723285]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_I" unique_id=1752804938]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_I" unique_id=372381052]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "I"
+[node name="Label" type="Label" parent="DragToArea/Area2D_I" unique_id=1585003661]
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "i"
 
 [node name="Area2D_J" type="Area2D" parent="DragToArea" unique_id=428615741]
-position = Vector2(988, 31)
+position = Vector2(882, 42)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxJ" type="Sprite2D" parent="DragToArea/Area2D_J" unique_id=1958863983]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_J" unique_id=986398208]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_J" unique_id=1277705170]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "J"
+[node name="Label" type="Label" parent="DragToArea/Area2D_J" unique_id=1798684717]
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "j"
 
 [node name="Area2D_K" type="Area2D" parent="DragToArea" unique_id=723620300]
-position = Vector2(1104, 123)
+position = Vector2(1002, 42)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxK" type="Sprite2D" parent="DragToArea/Area2D_K" unique_id=1051424108]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_K" unique_id=1589805411]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_K" unique_id=2101371520]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "K"
+[node name="Label" type="Label" parent="DragToArea/Area2D_K" unique_id=756724907]
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "k"
 
 [node name="Area2D_L" type="Area2D" parent="DragToArea" unique_id=162552491]
-position = Vector2(1116, 219)
+position = Vector2(1111, 41)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxL" type="Sprite2D" parent="DragToArea/Area2D_L" unique_id=191676543]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_L" unique_id=1661407191]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_L" unique_id=979776367]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "L"
+[node name="Label" type="Label" parent="DragToArea/Area2D_L" unique_id=278871436]
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "l"
 
 [node name="Area2D_M" type="Area2D" parent="DragToArea" unique_id=1116742006]
-position = Vector2(1108, 322)
+position = Vector2(1112, 140)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxM" type="Sprite2D" parent="DragToArea/Area2D_M" unique_id=354707760]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_M" unique_id=1364888067]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_M" unique_id=893047778]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "M"
+[node name="Label" type="Label" parent="DragToArea/Area2D_M" unique_id=1589012850]
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "m"
 
 [node name="Area2D_N" type="Area2D" parent="DragToArea" unique_id=1571079519]
-position = Vector2(1112, 421)
+position = Vector2(1099, 235)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxN" type="Sprite2D" parent="DragToArea/Area2D_N" unique_id=425948332]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_N" unique_id=164292894]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_N" unique_id=705945027]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "N"
+[node name="Label" type="Label" parent="DragToArea/Area2D_N" unique_id=588752186]
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "n"
 
 [node name="Area2D_O" type="Area2D" parent="DragToArea" unique_id=26884079]
-position = Vector2(1112, 510)
+position = Vector2(1099, 329)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxO" type="Sprite2D" parent="DragToArea/Area2D_O" unique_id=1320800210]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_O" unique_id=727907397]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_O" unique_id=1235595832]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "O"
+[node name="Label" type="Label" parent="DragToArea/Area2D_O" unique_id=1053383288]
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "o"
 
 [node name="Area2D_P" type="Area2D" parent="DragToArea" unique_id=1662380135]
-position = Vector2(1036, 617)
+position = Vector2(1094, 419)
 collision_layer = 8
 collision_mask = 4
+
+[node name="BoxP" type="Sprite2D" parent="DragToArea/Area2D_P" unique_id=622538084]
+texture = ExtResource("3_ae2cl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_P" unique_id=644053553]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_P" unique_id=147948499]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "P"
+[node name="Label" type="Label" parent="DragToArea/Area2D_P" unique_id=391220635]
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "p"
 
 [node name="Area2D_Q" type="Area2D" parent="DragToArea" unique_id=304635143]
-position = Vector2(891, 620)
+position = Vector2(977, 464)
 collision_layer = 8
 collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="DragToArea/Area2D_Q" unique_id=1068429708]
+texture = ExtResource("3_ae2cl")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_Q" unique_id=1417114374]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_Q" unique_id=812962398]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "Q"
+[node name="Label" type="Label" parent="DragToArea/Area2D_Q" unique_id=709616485]
+offset_left = -21.0
+offset_right = 19.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "q"
 
 [node name="Area2D_R" type="Area2D" parent="DragToArea" unique_id=186581740]
-position = Vector2(765, 615)
+position = Vector2(854, 465)
 collision_layer = 8
 collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="DragToArea/Area2D_R" unique_id=2003568472]
+texture = ExtResource("3_ae2cl")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_R" unique_id=808780218]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_R" unique_id=1730081124]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
+[node name="Label" type="Label" parent="DragToArea/Area2D_R" unique_id=1997645248]
+offset_left = -21.0
+offset_right = 19.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
 text = "R"
 
 [node name="Area2D_S" type="Area2D" parent="DragToArea" unique_id=504519181]
-position = Vector2(650, 613)
+position = Vector2(735, 465)
 collision_layer = 8
 collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="DragToArea/Area2D_S" unique_id=2077109039]
+texture = ExtResource("3_ae2cl")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_S" unique_id=325867132]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_S" unique_id=823700499]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
+[node name="Label" type="Label" parent="DragToArea/Area2D_S" unique_id=1573006257]
+offset_left = -21.0
+offset_right = 19.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
 text = "S"
 
 [node name="Area2D_T" type="Area2D" parent="DragToArea" unique_id=256765087]
-position = Vector2(532, 614)
+position = Vector2(622, 466)
 collision_layer = 8
 collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="DragToArea/Area2D_T" unique_id=1308975378]
+texture = ExtResource("3_ae2cl")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_T" unique_id=690826273]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_T" unique_id=1322506206]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "T"
+[node name="Label" type="Label" parent="DragToArea/Area2D_T" unique_id=849264251]
+offset_left = -21.0
+offset_right = 19.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "t"
 
 [node name="Area2D_U" type="Area2D" parent="DragToArea" unique_id=440653296]
-position = Vector2(412, 626)
+position = Vector2(505, 470)
 collision_layer = 8
 collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="DragToArea/Area2D_U" unique_id=637301963]
+texture = ExtResource("3_ae2cl")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_U" unique_id=177157038]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_U" unique_id=898803857]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "U"
+[node name="Label" type="Label" parent="DragToArea/Area2D_U" unique_id=1394187419]
+offset_left = -21.0
+offset_right = 19.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "u"
 
 [node name="Area2D_V" type="Area2D" parent="DragToArea" unique_id=868630774]
-position = Vector2(277, 622)
+position = Vector2(386, 471)
 collision_layer = 8
 collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="DragToArea/Area2D_V" unique_id=1212511690]
+texture = ExtResource("3_ae2cl")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_V" unique_id=1655849993]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_V" unique_id=1437018794]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "V"
+[node name="Label" type="Label" parent="DragToArea/Area2D_V" unique_id=1837424226]
+offset_left = -21.0
+offset_right = 19.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "v"
 
 [node name="Area2D_W" type="Area2D" parent="DragToArea" unique_id=1423802600]
-position = Vector2(152, 630)
+position = Vector2(269, 461)
 collision_layer = 8
 collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="DragToArea/Area2D_W" unique_id=1989398461]
+texture = ExtResource("3_ae2cl")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_W" unique_id=1468124007]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_W" unique_id=430060133]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "W"
+[node name="Label" type="Label" parent="DragToArea/Area2D_W" unique_id=1473610469]
+offset_left = -21.0
+offset_right = 19.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "w"
 
 [node name="Area2D_X" type="Area2D" parent="DragToArea" unique_id=145804824]
-position = Vector2(45, 544)
+position = Vector2(157, 456)
 collision_layer = 8
 collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="DragToArea/Area2D_X" unique_id=601816464]
+texture = ExtResource("3_ae2cl")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_X" unique_id=276408516]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_X" unique_id=1267787920]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
-text = "X"
+[node name="Label" type="Label" parent="DragToArea/Area2D_X" unique_id=1769663350]
+offset_left = -21.0
+offset_right = 19.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
+text = "x"
 
 [node name="Area2D_Y" type="Area2D" parent="DragToArea" unique_id=2112173396]
 position = Vector2(48, 454)
 collision_layer = 8
 collision_mask = 4
 
+[node name="Sprite2D" type="Sprite2D" parent="DragToArea/Area2D_Y" unique_id=772906404]
+texture = ExtResource("3_ae2cl")
+flip_h = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_Y" unique_id=33662061]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DragToArea/Area2D_Y" unique_id=485991924]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
+[node name="Label" type="Label" parent="DragToArea/Area2D_Y" unique_id=172144619]
+offset_left = -21.0
+offset_right = 19.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
 text = "Y"
 
 [node name="Area2D_Z" type="Area2D" parent="DragToArea" unique_id=956302847]
@@ -418,15 +557,20 @@ position = Vector2(49, 342)
 collision_layer = 8
 collision_mask = 4
 
+[node name="Sprite2D" type="Sprite2D" parent="DragToArea/Area2D_Z" unique_id=2109054898]
+texture = ExtResource("3_ae2cl")
+flip_h = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DragToArea/Area2D_Z" unique_id=1758062582]
 shape = SubResource("RectangleShape2D_t147j")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="DragToArea/Area2D_Z" unique_id=1357820771]
-offset_left = 4.0
-offset_top = -7.0
-offset_right = 44.0
-offset_bottom = 19.0
+offset_left = -21.0
+offset_right = 19.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_fonts/font = ExtResource("4_hkm2m")
 text = "Z"
 
 [node name="Marker_TL" type="Marker2D" parent="." unique_id=413127186]
