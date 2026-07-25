@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47x8t"]
 size = Vector2(254, 391)
 
-[node name="CEO" unique_id=803219588 groups=["ConversationStarters", "Interactables"] instance=ExtResource("1_47x8t")]
+[node name="CEO" unique_id=803219588 groups=["ConversationStarters"] instance=ExtResource("1_47x8t")]
 
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
 position = Vector2(0, 185.5)
@@ -13,4 +13,4 @@ shape = SubResource("RectangleShape2D_47x8t")
 
 [node name="Label" parent="Control" parent_id_path=PackedInt32Array(1289585158) index="0" unique_id=529532953]
 text = "Talk
-Space"
+[Space]"

@@ -1,3 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://dfvqo2s705px3"]
 
+[ext_resource type="FontFile" uid="uid://bit4q543qgvyv" path="res://font/NASA(4).ttf" id="1_nx7ni"]
+
 [resource]
+default_font = ExtResource("1_nx7ni")
+default_font_size = 24
