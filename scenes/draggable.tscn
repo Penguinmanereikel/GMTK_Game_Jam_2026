@@ -1,21 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://04irh3q4kcxq"]
+[gd_scene format=3 uid="uid://04irh3q4kcxq"]
 
-[ext_resource type="Script" path="res://scripts/draggable.gd" id="1_2t45r"]
+[ext_resource type="Script" uid="uid://ct5p71f74x0kh" path="res://scripts/draggable.gd" id="1_2t45r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0uaoo"]
 size = Vector2(121.5, 126.5)
 
-[node name="Draggable" type="Node2D"]
+[node name="Draggable" type="Node2D" unique_id=1067792322]
 script = ExtResource("1_2t45r")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=535355273]
 collision_layer = 4
 collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1164771897]
 shape = SubResource("RectangleShape2D_0uaoo")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399774307]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
