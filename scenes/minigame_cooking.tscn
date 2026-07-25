@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://djtql0r4svmv3"]
+
+[ext_resource type="Script" uid="uid://cgecqf6dcjkdy" path="res://scripts/minigame_cooking.gd" id="1_abmuv"]
+[ext_resource type="Texture2D" uid="uid://ctug0vf7fq8dt" path="res://assets/ProgressBar.png" id="1_ls78q"]
+[ext_resource type="Texture2D" uid="uid://doynvd3eoh7qy" path="res://assets/arrow.png" id="2_7cwmg"]
+
+[sub_resource type="Curve" id="Curve_abmuv"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.7484535, 0.32500005), 1.0870687, 1.0870687, 0, 0, Vector2(0.89072156, 0.89), 2.8129961, 2.8129961, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_7cwmg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 77, 258, 0, 0, 0, 0, 1072, 258)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_prmf7"]
+size = Vector2(145, 45)
+
+[node name="Minigame_Cooking" type="Node2D" unique_id=1236750143]
+script = ExtResource("1_abmuv")
+movement_curve = SubResource("Curve_abmuv")
+
+[node name="Progress Bar" type="Sprite2D" parent="." unique_id=1623159323]
+texture_filter = 1
+position = Vector2(573.5, 109.00001)
+scale = Vector2(6.48125, 0.9375)
+texture = ExtResource("1_ls78q")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=559506730]
+position = Vector2(1.5, -122)
+curve = SubResource("Curve2D_7cwmg")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=702645350]
+position = Vector2(77, 258)
+
+[node name="Arrow" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=1809768066]
+texture_filter = 1
+position = Vector2(0.5, -8)
+texture = ExtResource("2_7cwmg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=817732093]
+position = Vector2(910, 519)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=596314997]
+shape = SubResource("RectangleShape2D_prmf7")
+metadata/_edit_lock_ = true
+
+[connection signal="input_event" from="Area2D" to="." method="clicked_button"]
