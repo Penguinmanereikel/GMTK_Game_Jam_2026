@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dfocqnhhyouuj" path="res://scenes/player.tscn" id="1_iu00y"]
 [ext_resource type="PackedScene" uid="uid://bmqt5qs4lorx7" path="res://scenes/level_map.tscn" id="1_qtxt0"]
 [ext_resource type="Script" uid="uid://cc0rlfgt41b7h" path="res://scripts/main.gd" id="1_yk4e7"]
+[ext_resource type="PackedScene" uid="uid://wv6jnti57848" path="res://scenes/dialogue_box.tscn" id="4_jyhfs"]
 
 [node name="Main" type="Node2D" unique_id=311123939]
 script = ExtResource("1_yk4e7")
@@ -16,3 +17,8 @@ layer = -1
 position = Vector2(572, 334)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=111282740]
+
+[node name="Conversation" type="CanvasLayer" parent="." unique_id=2021424479]
+
+[node name="DialogueBox" parent="Conversation" unique_id=772792991 instance=ExtResource("4_jyhfs")]
+position = Vector2(575, 539)

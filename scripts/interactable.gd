@@ -7,7 +7,7 @@ func _ready() -> void:
 	$Control/Label.set('visible', false)
 
 func _process(delta):
-	if active and Input.is_action_just_pressed("Interact"):
+	if not Globals.dialogue_open and active and Input.is_action_just_pressed("Interact"):
 		_interact()
 
 func _interact():
