@@ -6,6 +6,8 @@ var start_time: int
 @export var lower_time_range: int
 @export var upper_time_range: int
 
+signal end_minigame(id)
+
 func _ready():
 	start_pos = $Card.position
 	target_dist = 940
@@ -31,4 +33,4 @@ func start():
 	print("Start")
 
 func finish():
-	print("Finish")
+	end_minigame.emit("CardSwipe")

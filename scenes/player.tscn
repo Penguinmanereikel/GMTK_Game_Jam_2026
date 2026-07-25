@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://db01hlh02s7aw" path="res://spritesheets/PCWalk.png" id="3_dqkch"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5w473"]
-size = Vector2(78.65585, 184.3757)
+size = Vector2(495.2992, 1364.4111)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
 atlas = ExtResource("2_qhqgy")
@@ -112,13 +112,13 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=752587366]
-collision_mask = 2
+collision_mask = 18
 motion_mode = 1
 script = ExtResource("1_rqpm2")
 playerSpeed = 500
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1593492170]
-position = Vector2(1.1920929e-07, 1.0591037)
+position = Vector2(6.999998, 16.000002)
 scale = Vector2(0.20593613, 0.1641734)
 shape = SubResource("RectangleShape2D_5w473")
 

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cxb6b7dmtyybu"]
+
+[ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_pgxas"]
+[ext_resource type="Script" uid="uid://baa5bqvkwbmpd" path="res://scripts/oven.gd" id="2_nd33l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nd33l"]
+size = Vector2(211, 204)
+
+[node name="Oven" unique_id=803219588 groups=["Interactables"] instance=ExtResource("1_pgxas")]
+script = ExtResource("2_nd33l")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
+position = Vector2(1, 95)
+shape = SubResource("RectangleShape2D_nd33l")

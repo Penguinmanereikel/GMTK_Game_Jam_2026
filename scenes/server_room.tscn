@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://4ij5ex2nck18"]
+
+[ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_i80ny"]
+[ext_resource type="Script" uid="uid://n0w4old1hqg3" path="res://scripts/server_room.gd" id="2_rmg4d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rmg4d"]
+size = Vector2(174, 136)
+
+[node name="ServerRoom" unique_id=803219588 groups=["Interactables"] instance=ExtResource("1_i80ny")]
+script = ExtResource("2_rmg4d")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
+position = Vector2(0, 58)
+shape = SubResource("RectangleShape2D_rmg4d")

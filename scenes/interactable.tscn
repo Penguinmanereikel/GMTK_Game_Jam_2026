@@ -45,7 +45,7 @@ _data = {
 [sub_resource type="LabelSettings" id="LabelSettings_prmf7"]
 font_size = 32
 
-[node name="Interactable" type="Node2D" unique_id=803219588]
+[node name="Interactable" type="Node2D" unique_id=803219588 groups=["Interactables"]]
 script = ExtResource("1_ij5l6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=404344015]
@@ -93,7 +93,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("1_56v82")
 text = "Interact
-Space"
+[Space]"
 label_settings = SubResource("LabelSettings_prmf7")
 horizontal_alignment = 1
 vertical_alignment = 1
