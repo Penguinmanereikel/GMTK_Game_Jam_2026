@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cwsysoso8cw8q"]
+
+[ext_resource type="Script" uid="uid://g0fxkqr8fu0a" path="res://scripts/minigame_card.gd" id="1_k1r1b"]
+[ext_resource type="PackedScene" uid="uid://d2jt7ggvdp358" path="res://scenes/card.tscn" id="2_g7krk"]
+
+[node name="Minigame_Card" type="Node2D" unique_id=76280558]
+script = ExtResource("1_k1r1b")
+lower_time_range = 750
+upper_time_range = 850
+
+[node name="Card" parent="." unique_id=448617300 instance=ExtResource("2_g7krk")]
+position = Vector2(194, 310)
+
+[connection signal="clicked" from="Card" to="." method="clicked_object"]
+[connection signal="unclicked" from="Card" to="." method="unclicked_object"]

@@ -23,9 +23,11 @@ func _process(_delta):
 func clicked_on(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
+			print("pressed")
 			offset = position - get_global_mouse_position()
 			clicked.emit(self)
 		elif is_dragging and not event.pressed:
+			print("unpressed")
 			offset = position - get_global_mouse_position()
 			unclicked.emit(self)
 
