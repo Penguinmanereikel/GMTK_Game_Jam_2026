@@ -78,10 +78,12 @@ func dragged_away_from_DragToArea(area):
 
 func start():
 	print("Started minigame, minigame mail")
+	show()
 	
 func finish():
 	print("Finished minigame, minigame mail")
 	$AudioStreamPlayer2.play()
+	hide()
 	start_dialogue.emit("MailGuyEnd")
 	end_minigame.emit("MailRoom")
 	

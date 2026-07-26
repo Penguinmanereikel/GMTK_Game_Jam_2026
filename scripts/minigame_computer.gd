@@ -7,6 +7,7 @@ var file_scene: PackedScene = preload("res://scenes/file_icon.tscn")
 
 var need_to_delete: float
 var deleted: float
+var finished: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,7 +18,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if $Window/ProgressBar.value == 100:
+	if $Window/ProgressBar.value >= 100 and not finished:
+		finished = true
 		finish()
 		$Window/ProgressBar.value = 0
 
@@ -39,11 +41,12 @@ func connect_file_click():
 
 func start():
 	print("Started minigame, minigame computer")
-	#finish()
+	show()
 	
 func finish():
 	print("Finished minigame, minigame computer")
 	$AudioStreamPlayer2.play()
+	hide()
 	start_dialogue.emit("ITGuyEnd")
 	end_minigame.emit("Computer")
 	

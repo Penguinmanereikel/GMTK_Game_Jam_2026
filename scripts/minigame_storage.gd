@@ -30,12 +30,14 @@ func start_timer():
 
 func start():
 	print("Started minigame, minigame storage")
+	show()
 	start_timer()
 
 func finish():
 	print("Finished minigame, minigame storage")
 	$AudioStreamPlayer.play()
 	$Timer.stop()
+	hide()
 	start_dialogue.emit("JanitorEnd")
 	end_minigame.emit("Storage")
 

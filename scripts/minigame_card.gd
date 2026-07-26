@@ -39,8 +39,10 @@ func unclicked_object(obj):
 
 func start():
 	print("Started minigame, minigame card")
+	show()
 
 func finish():
 	$Node/AudioStreamPlayer2.play()
 	print("Finished minigame, minigame card")
+	hide()
 	end_minigame.emit("CardSwipe")

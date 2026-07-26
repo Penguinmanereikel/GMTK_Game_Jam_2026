@@ -24,7 +24,7 @@ script = ExtResource("1_yk4e7")
 layer = -1
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1492953745]
-position = Vector2(4721, 149.50044)
+position = Vector2(4896.0005, 317)
 scale = Vector2(24.46007, 13.31173)
 texture = ExtResource("2_jkv2x")
 
@@ -53,7 +53,7 @@ metadata/_edit_lock_ = true
 [node name="Conversation" type="CanvasLayer" parent="." unique_id=2021424479]
 
 [node name="DialogueBox" parent="Conversation" unique_id=772792991 instance=ExtResource("4_jyhfs")]
-position = Vector2(575, 789)
+position = Vector2(575, 757)
 
 [node name="Minigame" type="CanvasLayer" parent="." unique_id=1242330759]
 layer = 2

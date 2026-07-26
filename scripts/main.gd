@@ -17,7 +17,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if game_over and Input.is_key_pressed(KEY_SPACE):
+	if game_over and Input.is_action_just_pressed("ContinueDialogue"):
 		get_tree().reload_current_scene()
 		
 func start_game():
