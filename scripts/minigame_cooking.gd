@@ -18,7 +18,7 @@ func clicked_button(_viewport, event, _shape_idx):
 			start_cooking()
 		else:
 			tween.stop()
-			if $Path2D/PathFollow2D.progress_ratio >= 0.8 and $Path2D/PathFollow2D.progress_ratio <= 0.822:
+			if $Path2D/PathFollow2D.progress_ratio >= 0.62 and $Path2D/PathFollow2D.progress_ratio <= 0.68:
 				finish()
 			else:
 				print("")
