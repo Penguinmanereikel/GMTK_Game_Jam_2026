@@ -3,10 +3,63 @@
 [ext_resource type="Script" uid="uid://cgecqf6dcjkdy" path="res://scripts/minigame_cooking.gd" id="1_abmuv"]
 [ext_resource type="Texture2D" uid="uid://ctug0vf7fq8dt" path="res://assets/ProgressBar.png" id="1_ls78q"]
 [ext_resource type="Texture2D" uid="uid://doynvd3eoh7qy" path="res://assets/arrow.png" id="2_7cwmg"]
+[ext_resource type="Texture2D" uid="uid://cgby114o7aylr" path="res://spritesheets/ToasterOvenCooking.png" id="2_b4u5t"]
+[ext_resource type="Texture2D" uid="uid://w1s4tj0k5o78" path="res://assets/ToasterOven.png" id="3_vmr4e"]
+[ext_resource type="Texture2D" uid="uid://dwmctvddputf5" path="res://assets/ToasterOvenKnob.png" id="4_7glin"]
 
 [sub_resource type="Curve" id="Curve_abmuv"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.7484535, 0.32500005), 1.0870687, 1.0870687, 0, 0, Vector2(0.89072156, 0.89), 2.8129961, 2.8129961, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 4
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgif4"]
+atlas = ExtResource("2_b4u5t")
+region = Rect2(0, 0, 52, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nesk6"]
+atlas = ExtResource("2_b4u5t")
+region = Rect2(52, 0, 52, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fu6fi"]
+atlas = ExtResource("2_b4u5t")
+region = Rect2(104, 0, 52, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmfha"]
+atlas = ExtResource("2_b4u5t")
+region = Rect2(156, 0, 52, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8poy"]
+atlas = ExtResource("2_b4u5t")
+region = Rect2(208, 0, 52, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60viv"]
+atlas = ExtResource("2_b4u5t")
+region = Rect2(260, 0, 52, 31)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_715ky"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgif4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nesk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fu6fi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmfha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8poy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60viv")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Curve2D" id="Curve2D_7cwmg"]
 _data = {
@@ -15,11 +68,34 @@ _data = {
 point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prmf7"]
-size = Vector2(145, 45)
+size = Vector2(128, 117.5)
 
 [node name="Minigame_Cooking" type="Node2D" unique_id=1236750143]
 script = ExtResource("1_abmuv")
 movement_curve = SubResource("Curve_abmuv")
+
+[node name="ToasterOven" type="Node2D" parent="." unique_id=1798091700]
+texture_filter = 1
+position = Vector2(93, 170)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ToasterOven" unique_id=1173617965]
+position = Vector2(465, 286.75)
+scale = Vector2(18.884615, 19.5)
+sprite_frames = SubResource("SpriteFrames_715ky")
+frame = 5
+frame_progress = 1.0
+
+[node name="Oven" type="Sprite2D" parent="ToasterOven" unique_id=621835361]
+z_index = 4
+position = Vector2(446.5, 246.75)
+scale = Vector2(18, 16.758)
+texture = ExtResource("3_vmr4e")
+
+[node name="Knob" type="Sprite2D" parent="ToasterOven" unique_id=809420198]
+z_index = 5
+position = Vector2(780.625, 313)
+scale = Vector2(18.178572, 16.857141)
+texture = ExtResource("4_7glin")
 
 [node name="Progress Bar" type="Sprite2D" parent="." unique_id=1623159323]
 texture_filter = 1
@@ -43,6 +119,8 @@ texture = ExtResource("2_7cwmg")
 position = Vector2(910, 519)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=596314997]
+z_index = 5
+position = Vector2(-35, -36.25)
 shape = SubResource("RectangleShape2D_prmf7")
 metadata/_edit_lock_ = true
 
