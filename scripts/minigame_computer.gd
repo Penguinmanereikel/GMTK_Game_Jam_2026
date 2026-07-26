@@ -38,12 +38,11 @@ func connect_file_click():
 
 func start():
 	print("Started minigame, minigame computer")
-	visible = true
 	finish()
 	
 func finish():
 	print("Finished minigame, minigame computer")
-	visible = false
+	$AudioStreamPlayer2.play()
 	start_dialogue.emit("ITGuyEnd")
 	end_minigame.emit("Computer")
 	
@@ -53,6 +52,7 @@ func tween_progress(newVal):
 	t.tween_property($Window/ProgressBar,'value', newVal*100, 1.0)
 
 func deleted_file(obj):
+	$AudioStreamPlayer.play()
 	obj.queue_free()
 	deleted += 1
 	tween_progress(deleted/need_to_delete)

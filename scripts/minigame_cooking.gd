@@ -18,14 +18,14 @@ func clicked_button(_viewport, event, _shape_idx):
 			start_cooking()
 		else:
 			tween.stop()
-			if $Path2D/PathFollow2D.progress_ratio >= 0.8 and $Path2D/PathFollow2D.progress_ratio <= 0.822:
+			if $Path2D/PathFollow2D.progress_ratio >= 0.62 and $Path2D/PathFollow2D.progress_ratio <= 0.68:
 				finish()
 			else:
-				print("")
 				fail()
 				
 func start_cooking():
 	tween = create_tween()
+	$Sounds/AudioStreamPlayer2.play()
 	tween.tween_method(move_arrow, 0.0, 1.0, 4.0)
 	#tween.tween_property($Path2D/PathFollow2D, "progress_ratio", 1.0, 4.0)
 
@@ -40,11 +40,15 @@ func start():
 func finish():
 	print("Finished minigame, minigame cooking")
 	visible = false
+	$Sounds/AudioStreamPlayer2.stop()
+	$Sounds/AudioStreamPlayer.play()
 	start_dialogue.emit("Oven")
 	end_minigame.emit("Cooking")
 
 func fail():
 	print("Fail")
+	$Sounds/AudioStreamPlayer2.stop()
+	$Sounds/AudioStreamPlayer3.play()
 	$Path2D/PathFollow2D.progress_ratio = 0.0
 	running = false
 	

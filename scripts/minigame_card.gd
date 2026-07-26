@@ -23,17 +23,24 @@ func unclicked_object(obj):
 	var elapsed_time: int = Time.get_ticks_msec() - start_time
 	obj.is_dragging = false
 	if obj.position.x >= target_dist:
-		
 		print(elapsed_time)
 		if elapsed_time >= lower_time_range and elapsed_time <= upper_time_range:
 			finish()
+		elif elapsed_time < lower_time_range:
+			$Label.text = "Swipe faster"
+			$Node/AudioStreamPlayer.play()
+		elif elapsed_time > upper_time_range:
+			$Label.text = "Swipe slower"
+			$Node/AudioStreamPlayer.play()
+	else:
+		$Label.text = "Swipe all the way"
+		$Node/AudioStreamPlayer.play()
 	$Card.position = start_pos
 
 func start():
 	print("Started minigame, minigame card")
-	visible = true
 
 func finish():
+	$Node/AudioStreamPlayer2.play()
 	print("Finished minigame, minigame card")
-	visible = false
 	end_minigame.emit("CardSwipe")

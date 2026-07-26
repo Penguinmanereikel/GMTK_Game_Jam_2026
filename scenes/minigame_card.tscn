@@ -2,14 +2,51 @@
 
 [ext_resource type="Script" uid="uid://g0fxkqr8fu0a" path="res://scripts/minigame_card.gd" id="1_k1r1b"]
 [ext_resource type="PackedScene" uid="uid://d2jt7ggvdp358" path="res://scenes/card.tscn" id="2_g7krk"]
+[ext_resource type="Texture2D" uid="uid://ds6d781gkviju" path="res://assets/CardReaderTop.png" id="2_ln8rf"]
+[ext_resource type="Texture2D" uid="uid://hv5sa43qn365" path="res://assets/CardReaderBottom.png" id="4_jdtbm"]
+[ext_resource type="Theme" uid="uid://dfvqo2s705px3" path="res://scenes/theme.tres" id="5_i24k2"]
+[ext_resource type="AudioStream" uid="uid://c0en747hefpt" path="res://assets/sfx/failure.wav" id="6_i24k2"]
+[ext_resource type="AudioStream" uid="uid://chyuvay4n0ugf" path="res://assets/sfx/pickup.wav" id="7_yj8dw"]
 
 [node name="Minigame_Card" type="Node2D" unique_id=76280558]
 script = ExtResource("1_k1r1b")
 lower_time_range = 750
 upper_time_range = 850
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=562964476]
+texture_filter = 1
+position = Vector2(551.00006, 313)
+scale = Vector2(7, 7)
+texture = ExtResource("2_ln8rf")
+
 [node name="Card" parent="." unique_id=448617300 instance=ExtResource("2_g7krk")]
+z_index = -1
 position = Vector2(194, 310)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=564396483]
+z_index = -2
+texture_filter = 1
+position = Vector2(549.99994, 299.99997)
+scale = Vector2(7, 7)
+texture = ExtResource("4_jdtbm")
+
+[node name="Label" type="Label" parent="." unique_id=527316427]
+texture_filter = 1
+offset_left = 268.0
+offset_top = 44.0
+offset_right = 411.0
+offset_bottom = 67.0
+scale = Vector2(2, 2)
+theme = ExtResource("5_i24k2")
+text = "Slide Card"
+
+[node name="Node" type="Node" parent="." unique_id=255509494]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node" unique_id=824600844]
+stream = ExtResource("6_i24k2")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Node" unique_id=931781612]
+stream = ExtResource("7_yj8dw")
 
 [connection signal="clicked" from="Card" to="." method="clicked_object"]
 [connection signal="unclicked" from="Card" to="." method="unclicked_object"]

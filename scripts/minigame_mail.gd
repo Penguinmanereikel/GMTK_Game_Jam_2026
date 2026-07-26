@@ -15,8 +15,8 @@ var curr_dragging_touching: Array
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-#	spawn_mail(26*4)
-	spawn_mail(1)
+	spawn_mail(26*4)
+	#spawn_mail(1)
 	for draggable in $Draggables.get_children():
 		draggable.connect('clicked', clicked_object)
 		draggable.connect('unclicked', unclicked_object)
@@ -60,6 +60,7 @@ func check_DragToAreas():
 	for area in curr_dragging_touching:
 		if dragToAreaDict[area] == curr_dragging.letter:
 			drop_on_area(curr_dragging, area)
+			$AudioStreamPlayer.play()
 			check_finish_condition()
 			
 func drop_on_area(draggable, dragToArea):
@@ -76,12 +77,11 @@ func dragged_away_from_DragToArea(area):
 	curr_dragging_touching.erase(area)
 
 func start():
-	visible = true
 	print("Started minigame, minigame mail")
 	
 func finish():
 	print("Finished minigame, minigame mail")
-	visible = false
+	$AudioStreamPlayer2.play()
 	start_dialogue.emit("MailGuyEnd")
 	end_minigame.emit("MailRoom")
 	

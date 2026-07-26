@@ -57,12 +57,15 @@ script = ExtResource("8_ya4ey")
 
 [node name="GameplayMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=496518962]
 stream = ExtResource("9_eb6dy")
+parameters/looping = true
 
 [node name="WinMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=2072353007]
 stream = ExtResource("10_trceg")
+parameters/looping = true
 
 [node name="GameOverMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=831194811]
 stream = ExtResource("11_a8y0u")
+parameters/looping = true
 
 [node name="Timer" type="Timer" parent="." unique_id=996150503]
 wait_time = 600.0

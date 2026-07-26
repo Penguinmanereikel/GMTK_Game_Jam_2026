@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://04irh3q4kcxq" path="res://scenes/draggable.tscn" id="1_6u4wf"]
 [ext_resource type="Script" uid="uid://b6hxa4o4803p3" path="res://scripts/card.gd" id="2_kg30u"]
-[ext_resource type="Texture2D" uid="uid://hieh4mx6525u" path="res://icon.svg" id="2_ktuci"]
+[ext_resource type="Texture2D" uid="uid://ny7dbamq4dxn" path="res://assets/ID.png" id="3_ktuci"]
 
 [node name="Card" unique_id=448617300 instance=ExtResource("1_6u4wf")]
 script = ExtResource("2_kg30u")
@@ -11,6 +11,8 @@ script = ExtResource("2_kg30u")
 collision_mask = 0
 
 [node name="Sprite2D" parent="." index="1" unique_id=1399774307]
-texture = ExtResource("2_ktuci")
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("3_ktuci")
 
 [connection signal="mouse_exited" from="Area2D" to="." method="mouse_left"]

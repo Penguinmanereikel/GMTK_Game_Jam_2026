@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dukkkcjfn34sx" path="res://assets/MiniGameTable.png" id="2_cpsol"]
 [ext_resource type="Texture2D" uid="uid://ckn6eyehifo0u" path="res://assets/FileBox.png" id="3_ae2cl"]
 [ext_resource type="FontFile" uid="uid://dvmc74ufeglux" path="res://font/NASA.ttf" id="4_hkm2m"]
+[ext_resource type="AudioStream" uid="uid://bgv0xex2ix4mn" path="res://assets/sfx/pickup_paper.wav" id="6_ae2cl"]
+[ext_resource type="AudioStream" uid="uid://chyuvay4n0ugf" path="res://assets/sfx/pickup.wav" id="7_hkm2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t147j"]
 size = Vector2(100, 80)
@@ -577,4 +579,10 @@ text = "Z"
 position = Vector2(198, 156)
 
 [node name="Marker_BR" type="Marker2D" parent="." unique_id=349732928]
-position = Vector2(947, 486)
+position = Vector2(954, 372)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1451592914]
+stream = ExtResource("6_ae2cl")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=926251448]
+stream = ExtResource("7_hkm2m")
