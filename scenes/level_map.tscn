@@ -4,8 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cvsjon5seb07t" path="res://assets/RocketBGTiles.png" id="1_26e65"]
 [ext_resource type="PackedScene" uid="uid://dp13072kgtgnm" path="res://scenes/stairs.tscn" id="1_ea8li"]
 [ext_resource type="Texture2D" uid="uid://22xtjkbr0a5n" path="res://assets/Rocket.png" id="2_26e65"]
+[ext_resource type="Texture2D" uid="uid://c3m2clv175aii" path="res://assets/Background/1.png" id="2_xb237"]
+[ext_resource type="Texture2D" uid="uid://caorc0n3vdhmu" path="res://assets/Background/2.png" id="3_auith"]
 [ext_resource type="PackedScene" uid="uid://c61w3elq0gygi" path="res://scenes/mail_guy.tscn" id="3_e7mj4"]
+[ext_resource type="Texture2D" uid="uid://b1h5iwltmsxip" path="res://assets/Background/3.png" id="4_e0uae"]
+[ext_resource type="Texture2D" uid="uid://cry2au36skcf2" path="res://assets/Background/10.png" id="5_x8qqs"]
 [ext_resource type="PackedScene" uid="uid://bxrki7svw0tnp" path="res://scenes/mechanic.tscn" id="6_28enl"]
+[ext_resource type="Texture2D" uid="uid://cpdj7b7q0v488" path="res://assets/Background/8.png" id="6_jh031"]
 [ext_resource type="PackedScene" uid="uid://cxb6b7dmtyybu" path="res://scenes/oven.tscn" id="7_4mfww"]
 [ext_resource type="PackedScene" uid="uid://cnwyuh3lwwlfm" path="res://scenes/it_guy.tscn" id="8_ublle"]
 [ext_resource type="PackedScene" uid="uid://4ij5ex2nck18" path="res://scenes/server_room.tscn" id="9_8v2yb"]
@@ -126,6 +131,37 @@ sources/0 = SubResource("TileSetAtlasSource_12kai")
 
 [node name="LevelMap" type="Node2D" unique_id=1503765608]
 script = ExtResource("1_12kai")
+
+[node name="Background" type="Node2D" parent="." unique_id=1998884194]
+z_index = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1195974129]
+texture_filter = 1
+position = Vector2(4544.5, -238.99994)
+scale = Vector2(15.876735, 7.925926)
+texture = ExtResource("2_xb237")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background" unique_id=882253755]
+texture_filter = 1
+position = Vector2(4546, -351.9999)
+scale = Vector2(15.881945, 7.2160497)
+texture = ExtResource("3_auith")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Background" unique_id=657191126]
+position = Vector2(4532.5005, -96)
+scale = Vector2(15.835072, 12.994599)
+texture = ExtResource("4_e0uae")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background" unique_id=3546501]
+texture_filter = 1
+position = Vector2(4554.001, 305.74994)
+scale = Vector2(15.760416, 8.285493)
+texture = ExtResource("5_x8qqs")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Background" unique_id=176286956]
+position = Vector2(4544.7495, 375.25006)
+scale = Vector2(15.855035, 11.816358)
+texture = ExtResource("6_jh031")
 
 [node name="Boundaries" type="Node2D" parent="." unique_id=2033457278]
 
