@@ -1,6 +1,7 @@
 extends Node2D
 
 signal end_minigame(id)
+signal start_dialogue(id)
 
 var running: int = false
 var tween: Tween
@@ -31,11 +32,19 @@ func start_cooking():
 func move_arrow(pos):
 	$Path2D/PathFollow2D.progress_ratio = movement_curve.sample(pos)
 
+
+func start():
+	print("Started minigame, minigame cooking")
+	visible = true
+
 func finish():
-	print("Win")
+	print("Finished minigame, minigame cooking")
+	visible = false
+	start_dialogue.emit("Oven")
 	end_minigame.emit("Cooking")
 
 func fail():
 	print("Fail")
-	get_tree().reload_current_scene()
+	$Path2D/PathFollow2D.progress_ratio = 0.0
+	running = false
 	

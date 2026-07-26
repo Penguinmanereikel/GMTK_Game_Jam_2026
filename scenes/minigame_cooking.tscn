@@ -17,7 +17,7 @@ point_count = 2
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prmf7"]
 size = Vector2(145, 45)
 
-[node name="Minigame_Cooking" type="Node2D" unique_id=1236750143]
+[node name="Minigame_Cooking" type="Node2D" unique_id=1236750143 groups=["ConversationStarters"]]
 script = ExtResource("1_abmuv")
 movement_curve = SubResource("Curve_abmuv")
 

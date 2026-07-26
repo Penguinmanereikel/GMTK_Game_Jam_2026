@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://dvgwdkey82fet" path="res://scripts/music_manager.gd" id="8_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://ct3wkm5srldbw" path="res://scenes/minigame_computer.tscn" id="9_a8y0u"]
 [ext_resource type="AudioStream" uid="uid://cjg3k8xn1wscg" path="res://assets/music/gameplay.ogg" id="9_eb6dy"]
-[ext_resource type="AudioStream" uid="uid://bdy51628jvbc1" path="res://assets/music/win.ogg" id="10_trceg"]
+[ext_resource type="AudioStream" uid="uid://boxcaidqlyfgv" path="res://assets/music/win.ogg" id="10_trceg"]
 [ext_resource type="AudioStream" uid="uid://6yvb0xjca2vs" path="res://assets/music/gameover.ogg" id="11_a8y0u"]
 
 [node name="Main" type="Node2D" unique_id=311123939]
@@ -24,7 +24,6 @@ layer = -1
 
 [node name="Player" parent="." unique_id=557363118 instance=ExtResource("1_iu00y")]
 position = Vector2(582, 2048)
-playerSpeed = 1000
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=111282740]
 position = Vector2(0, -97)
@@ -65,6 +64,11 @@ stream = ExtResource("10_trceg")
 [node name="GameOverMusic" type="AudioStreamPlayer" parent="MusicManager" unique_id=831194811]
 stream = ExtResource("11_a8y0u")
 
+[node name="Timer" type="Timer" parent="." unique_id=996150503]
+wait_time = 600.0
+one_shot = true
+
+[connection signal="minigame_start" from="LevelMap" to="." method="start_minigame"]
 [connection signal="end_dialogue" from="Conversation/DialogueBox" to="." method="end_dialogue"]
 [connection signal="start_minigame" from="Conversation/DialogueBox" to="." method="start_minigame"]
 [connection signal="end_minigame" from="Minigame/Minigame_Mail" to="." method="end_minigame"]
@@ -72,3 +76,4 @@ stream = ExtResource("11_a8y0u")
 [connection signal="end_minigame" from="Minigame/Minigame_Cooking" to="." method="end_minigame"]
 [connection signal="end_minigame" from="Minigame/Minigame_Storage" to="." method="end_minigame"]
 [connection signal="end_minigame" from="Minigame/Minigame_Computer" to="." method="end_minigame"]
+[connection signal="timeout" from="Timer" to="." method="lose"]

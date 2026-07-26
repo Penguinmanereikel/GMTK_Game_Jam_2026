@@ -1,6 +1,7 @@
 extends Node2D
 
 signal end_minigame(id)
+signal start_dialogue(id)
 
 var curr_dragging: Node2D = null
 var dragToAreaDict: Dictionary = {}
@@ -75,9 +76,13 @@ func dragged_away_from_DragToArea(area):
 	curr_dragging_touching.erase(area)
 
 func start():
-	print("Start")
+	visible = true
+	print("Started minigame, minigame mail")
 	
 func finish():
+	print("Finished minigame, minigame mail")
+	visible = false
+	start_dialogue.emit("MailGuyEnd")
 	end_minigame.emit("MailRoom")
 	
 func check_finish_condition():

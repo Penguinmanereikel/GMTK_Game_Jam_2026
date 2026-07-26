@@ -1,6 +1,7 @@
 extends Node2D
 
 signal end_minigame(id)
+signal start_dialogue(id)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,5 +12,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func start():
+	print("Started minigame, minigame computer")
+	visible = true
+	finish()
+	
 func finish():
-	end_minigame.emit("Storage")
+	print("Finished minigame, minigame computer")
+	visible = false
+	start_dialogue.emit("ITGuyEnd")
+	end_minigame.emit("Computer")

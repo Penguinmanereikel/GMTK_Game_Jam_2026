@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t147j"]
 size = Vector2(100, 80)
 
-[node name="Minigame_Mail" type="Node2D" unique_id=2041814949]
+[node name="Minigame_Mail" type="Node2D" unique_id=2041814949 groups=["ConversationStarters"]]
 script = ExtResource("1_gpall")
 
 [node name="MiniGameTable" type="Sprite2D" parent="." unique_id=1767481339]

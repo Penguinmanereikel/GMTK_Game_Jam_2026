@@ -30,7 +30,10 @@ func unclicked_object(obj):
 	$Card.position = start_pos
 
 func start():
-	print("Start")
+	print("Started minigame, minigame card")
+	visible = true
 
 func finish():
+	print("Finished minigame, minigame card")
+	visible = false
 	end_minigame.emit("CardSwipe")

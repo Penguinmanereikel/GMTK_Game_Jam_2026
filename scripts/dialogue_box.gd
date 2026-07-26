@@ -46,6 +46,10 @@ const CONVERSATION_DICT = {
 		#["Player", "Fine. I'll go upstairs and get you a pizza."],
 		["END", ""]
 	],
+	"Oven": [
+		["Player", "Alright, now just need to bring it back down to 'em."],
+		["END", ""]
+	],
 	"MechanicEnd": [
 		["Mechanic", "Heck, yeah. Pizza!"],
 		#["Player", "And what about what I need?"],
@@ -138,9 +142,11 @@ func _process(delta: float) -> void:
 	if active and Input.is_action_just_pressed("ContinueDialogue"):
 		convo_index += 1
 		if active_convo[convo_index][0] == "END":
+			print("dialogue box close: convo ended")
 			close()
 			end_dialogue.emit()
 		elif active_convo[convo_index][0] == "MINIGAME":
+			print("dialogue box close: starting minigame")
 			start_minigame.emit(active_convo[convo_index][1])
 			close()
 			end_dialogue.emit()
@@ -167,14 +173,14 @@ func animate_dialogue():
 	text_tween.finished.connect(func (): active = true)
 
 func open():
-	print("Open")
+	print("Open Dialogue")
 	active = true
 	var box_tween = create_tween()
 	box_tween.tween_property($".", "position:y", OPEN_POSITION_Y, 0.25)
 	
 	
 func close():
-	print("Close")
+	print("Close Dialogue, dialogue box, close()")
 	active = false
 	var box_tween = create_tween()
 	box_tween.tween_property($".", "position:y", CLOSE_POSITION_Y, 0.25)

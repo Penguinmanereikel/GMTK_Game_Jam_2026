@@ -11,7 +11,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	dir = 0
-	if Globals.dialogue_open == false and Globals.minigame_open == false:
+	#print("Player status: ", Globals.dialogue_open, " ", Globals.minigame_open)
+	if Globals.dialogue_open == false and Globals.minigame_open == false and Globals.overscreen_present == false:
 		if Input.is_action_pressed("Left"):
 			dir -= 1
 		if Input.is_action_pressed("Right"):

@@ -16,11 +16,11 @@ func _interact():
 	push_error("Interaction behavior not defined")
 
 func _make_active(_body: Node2D):
-	print("activated")
+	print("Activated ", self)
 	$Control/Label.set('visible', true)
 	active = true
 	
 func _make_inactive(_body: Node2D):
-	print("deactivated")
+	print("Deactivated ", self)
 	$Control/Label.set('visible', false)
 	active = false

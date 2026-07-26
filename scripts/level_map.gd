@@ -1,6 +1,9 @@
 extends Node2D
 
+signal minigame_start(id)
+
 func update_interactables(id):
+	print("update interactables: ", id)
 	if id == 'init':
 		$Janitor.process_mode = Node.PROCESS_MODE_INHERIT
 		$MailGuy.process_mode = Node.PROCESS_MODE_DISABLED
@@ -14,6 +17,7 @@ func update_interactables(id):
 		$Janitor.process_mode = Node.PROCESS_MODE_DISABLED
 		$Mechanic.process_mode = Node.PROCESS_MODE_INHERIT
 	if id == "mechanic_conversation":
+		print("update interactables: mechanic conversation")
 		$Mechanic.process_mode = Node.PROCESS_MODE_DISABLED
 		$Oven.process_mode = Node.PROCESS_MODE_INHERIT
 	if id == "Cooking":
@@ -38,3 +42,6 @@ func update_interactables(id):
 		$CEO.process_mode = Node.PROCESS_MODE_INHERIT
 		$ShipDoor.process_mode = Node.PROCESS_MODE_INHERIT
 	
+func send_minigame_start(id):
+	print("minigame start emitted")
+	minigame_start.emit(id)

@@ -241,3 +241,9 @@ position = Vector2(222, -125)
 
 [node name="ShipDoor" parent="." unique_id=483014493 instance=ExtResource("12_jbwni")]
 position = Vector2(7763, 101)
+
+[connection signal="update_interactables" from="Mechanic" to="." method="update_interactables"]
+[connection signal="minigame_start" from="Oven" to="." method="send_minigame_start"]
+[connection signal="update_interactables" from="ServerRoom" to="." method="update_interactables"]
+[connection signal="update_interactables" from="CEO" to="." method="update_interactables"]
+[connection signal="start_minigame" from="ShipDoor" to="." method="send_minigame_start"]

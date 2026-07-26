@@ -9,5 +9,5 @@ func _interact():
 		start_dialogue.emit("CEOStart")
 		update_interactables.emit("ceo_conversation")
 	else:
-		start_dialogue.emit("CEO2")
+		start_dialogue.emit("CEOEnd")
 		update_interactables.emit("ceo_conversation2")

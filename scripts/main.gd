@@ -46,21 +46,27 @@ func wire_up_conversation_starters():
 	
 func start_minigame(id):
 	var minigame_scene: Node2D = MINIGAME_DICT[id]
-	minigame_scene.visible = true
 	Globals.minigame_open = true
+	print("Started minigame, main")
+	minigame_scene.start()
 	
 func end_minigame(id):
+	print("Ended minigame, main")
 	var minigame_scene:Node2D = MINIGAME_DICT[id]
-	minigame_scene.visible = false
 	Globals.minigame_open = false
+	print(Globals.minigame_open)
 	$LevelMap.update_interactables(id)
+	if id == "CardSwipe":
+		win()
 		
 func win():
+	Globals.overscreen_present = true
 	print("Win")
 	print("Play Win Music")
 	print("Show Win Screen")
 		
 func lose():
+	Globals.overscreen_present = true
 	print("Game Over")
 	print("Show Game Over Screen")
 	print("Play Game Over Music")
