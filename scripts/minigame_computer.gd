@@ -19,6 +19,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if $Window/ProgressBar.value == 100:
 		finish()
+		$Window/ProgressBar.value = 0
 
 func spawn_files(num):
 	var file: Node2D

@@ -69,6 +69,7 @@ visible = false
 
 [node name="Minigame_Storage" parent="Minigame" unique_id=1705277425 instance=ExtResource("8_trceg")]
 visible = false
+target = 2
 
 [node name="Minigame_Computer" parent="Minigame" unique_id=1612808720 instance=ExtResource("9_a8y0u")]
 visible = false
