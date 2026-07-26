@@ -16,7 +16,7 @@ const CONVERSATION_DICT = {
 		["Player", "OH, CRAP! I forgot to carry the 1 here!"],
 		["Player", "By my calculations, the ship needs like 40 extra pounds onboard or it'll crash!"],
 		["Player", "Dangit! I can't let anyone find out about this. I gotta find some heavy stuff and sneak it onboard!"],
-		["Player", "I should be able to find something upstairs in the storage room..."],
+		["Player", "I should be able to find something down the hall in the storage room..."],
 		["END", ""],
 	],
 	"JanitorStart": [
@@ -31,11 +31,11 @@ const CONVERSATION_DICT = {
 	],
 	"JanitorEnd": [
 		["Player", "Great. Got a huge box full of metal junk. But I'll need more"],
-		["Player", "Maybe I can find something from the ship mechanic. He should be upstairs."],
+		["Player", "Maybe I can find something from the ship mechanic. She should be upstairs."],
 		["END", ""]
 	],
 	"MechanicStart": [
-		["Player", "Hey, man. I need your help."],
+		["Player", "Hey, there. I need your help."],
 		["Mechanic", "Hey, it's you! Big day, huh? All our hard work ready to pay off."],
 		["Player", "Right... Yeah, big day..."],
 		["Player", "Anyway, I have a favor to ask. Could you get me something really heavy?"],
@@ -47,7 +47,7 @@ const CONVERSATION_DICT = {
 		["END", ""]
 	],
 	"Oven": [
-		["Player", "Alright, now just need to bring it back down to 'em."],
+		["Player", "Alright, now just need to bring it back down to her."],
 		["END", ""]
 	],
 	"MechanicEnd": [
@@ -117,12 +117,12 @@ const CONVERSATION_DICT = {
 	],
 }
 const CONVERSATION_COLORS = {
-	"Player": Color(0.896, 0.715, 0.0, 1.0),
-	"MailGuy": Color(0.0, 0.67, 0.738, 1.0),
-	"Janitor": Color(0.843, 0.419, 0.0, 1.0),
-	"Mechanic": Color(0.088, 0.488, 1.0, 1.0),
-	"ITGuy": Color(0.733, 0.0, 0.708, 1.0),
-	"CEO": Color(0.969, 0.0, 0.21, 1.0),
+	"Player": Color(0.855, 0.682, 0.0, 1.0),
+	"MailGuy": Color(0.0, 0.752, 0.828, 1.0),
+	"Janitor": Color(0.998, 0.502, 0.0, 1.0),
+	"Mechanic": Color(0.573, 0.746, 1.0, 1.0),
+	"ITGuy": Color(1.0, 0.345, 0.963, 1.0),
+	"CEO": Color(1.0, 0.369, 0.38, 1.0),
 }
 var active_convo: Array
 var active: bool

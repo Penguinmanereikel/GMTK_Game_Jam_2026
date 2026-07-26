@@ -88,8 +88,6 @@ stream = ExtResource("11_a8y0u")
 parameters/looping = true
 
 [node name="Timer" type="Timer" parent="." unique_id=996150503]
-wait_time = 600.0
-one_shot = true
 
 [connection signal="minigame_start" from="LevelMap" to="." method="start_minigame"]
 [connection signal="end_dialogue" from="Conversation/DialogueBox" to="." method="end_dialogue"]
@@ -99,4 +97,3 @@ one_shot = true
 [connection signal="end_minigame" from="Minigame/Minigame_Cooking" to="." method="end_minigame"]
 [connection signal="end_minigame" from="Minigame/Minigame_Storage" to="." method="end_minigame"]
 [connection signal="end_minigame" from="Minigame/Minigame_Computer" to="." method="end_minigame"]
-[connection signal="timeout" from="Timer" to="." method="lose"]

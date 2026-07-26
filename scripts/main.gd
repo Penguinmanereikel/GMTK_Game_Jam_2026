@@ -62,12 +62,12 @@ func end_minigame(id):
 func win():
 	Globals.overscreen_present = true
 	print("Win")
-	print("Play Win Music")
+	$MusicManager/WinMusic.play()
 	print("Show Win Screen")
 		
 func lose():
 	Globals.overscreen_present = true
 	print("Game Over")
 	print("Show Game Over Screen")
-	print("Play Game Over Music")
+	$MusicManager/GameOverMusic.play()
 	game_over = true
