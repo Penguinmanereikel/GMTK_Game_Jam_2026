@@ -31,7 +31,7 @@ const CONVERSATION_DICT = {
 	],
 	"JanitorEnd": [
 		["Player", "Great. Got a huge box full of metal junk. But I'll need more"],
-		#["Player", "Maybe I can find something from the ship mechanic. She should be upstairs."],
+		["Player", "Maybe I can find something from the ship mechanic. She should be upstairs."],
 		["END", ""]
 	],
 	"MechanicStart": [
