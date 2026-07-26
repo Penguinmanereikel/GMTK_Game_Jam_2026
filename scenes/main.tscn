@@ -44,6 +44,7 @@ texture = ExtResource("4_jbj1t")
 
 [node name="Player" parent="." unique_id=557363118 instance=ExtResource("1_iu00y")]
 position = Vector2(582, 2048)
+playerSpeed = 1000
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=111282740]
 position = Vector2(0, -97)

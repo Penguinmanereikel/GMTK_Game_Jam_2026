@@ -72,4 +72,4 @@ shape = SubResource("RectangleShape2D_qe0e1")
 
 [node name="Label" parent="Control" parent_id_path=PackedInt32Array(1289585158) index="0" unique_id=529532953]
 text = "Talk
-[Space]"
+Space"

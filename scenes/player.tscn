@@ -115,7 +115,7 @@ animations = [{
 collision_mask = 18
 motion_mode = 1
 script = ExtResource("1_rqpm2")
-playerSpeed = 3000
+playerSpeed = 5000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1593492170]
 position = Vector2(6.999998, 16.000002)

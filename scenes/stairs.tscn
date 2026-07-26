@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t8gvg"]
 size = Vector2(182, 210)
 
-[node name="Stairs" unique_id=803219588 groups=["Interactables"] instance=ExtResource("1_qpode")]
+[node name="Stairs" unique_id=803219588 instance=ExtResource("1_qpode")]
 script = ExtResource("1_oeduy")
 
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
@@ -17,7 +17,7 @@ shape = SubResource("RectangleShape2D_t8gvg")
 offset_left = -84.0
 offset_right = 84.0
 text = "Take Stairs
-[Space]"
+Space"
 label_settings = null
 
 [node name="Marker2D" type="Marker2D" parent="." index="5" unique_id=1625290300]

@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_h1dpw"]
 [ext_resource type="Script" uid="uid://13imuow76q31" path="res://scripts/mechanic.gd" id="2_qa1uj"]
-[ext_resource type="Texture2D" uid="uid://hieh4mx6525u" path="res://icon.svg" id="3_abs1k"]
 [ext_resource type="Texture2D" uid="uid://c1r50h6h4fwlh" path="res://spritesheets/Mechanicidle.png" id="4_1qttu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2tefa"]
@@ -61,9 +60,6 @@ size = Vector2(356, 265)
 [node name="Mechanic" unique_id=803219588 groups=["ConversationStarters"] instance=ExtResource("1_h1dpw")]
 script = ExtResource("2_qa1uj")
 
-[node name="Sprite2D" parent="." index="0" unique_id=404344015]
-texture = ExtResource("3_abs1k")
-
 [node name="AnimatedSprite2D" parent="." index="1" unique_id=437311791]
 texture_filter = 1
 position = Vector2(0, 131)
@@ -78,4 +74,4 @@ shape = SubResource("RectangleShape2D_qa1uj")
 
 [node name="Label" parent="Control" parent_id_path=PackedInt32Array(1289585158) index="0" unique_id=529532953]
 text = "Talk
-[Space]"
+Space"

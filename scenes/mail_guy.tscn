@@ -77,6 +77,6 @@ metadata/_edit_lock_ = true
 
 [node name="Label" parent="Control" index="0" unique_id=529532953]
 text = "Talk
-[Space]"
+Space"
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true

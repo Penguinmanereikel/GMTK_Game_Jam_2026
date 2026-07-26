@@ -38,7 +38,7 @@ func connect_file_click():
 
 func start():
 	print("Started minigame, minigame computer")
-	finish()
+	#finish()
 	
 func finish():
 	print("Finished minigame, minigame computer")
