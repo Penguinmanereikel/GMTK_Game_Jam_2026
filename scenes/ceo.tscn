@@ -2,15 +2,74 @@
 
 [ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_47x8t"]
 [ext_resource type="Script" uid="uid://dptjthk1luyq3" path="res://scripts/ceo.gd" id="2_vjl82"]
+[ext_resource type="Texture2D" uid="uid://dyyiti6t6tkdi" path="res://spritesheets/CEOidle.png" id="3_xvbod"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wum1i"]
+atlas = ExtResource("3_xvbod")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yujoo"]
+atlas = ExtResource("3_xvbod")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xbx8"]
+atlas = ExtResource("3_xvbod")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eaulu"]
+atlas = ExtResource("3_xvbod")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvnnm"]
+atlas = ExtResource("3_xvbod")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0s5h"]
+atlas = ExtResource("3_xvbod")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ynpb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wum1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yujoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xbx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eaulu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvnnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0s5h")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 9.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47x8t"]
-size = Vector2(254, 391)
+size = Vector2(254, 268)
 
 [node name="CEO" unique_id=803219588 groups=["ConversationStarters"] instance=ExtResource("1_47x8t")]
 script = ExtResource("2_vjl82")
 
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=437311791]
+texture_filter = 1
+position = Vector2(0, 128)
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_5ynpb")
+autoplay = "default"
+frame_progress = 0.16500385
+
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
-position = Vector2(0, 185.5)
+position = Vector2(0, 124)
 shape = SubResource("RectangleShape2D_47x8t")
 
 [node name="Label" parent="Control" parent_id_path=PackedInt32Array(1289585158) index="0" unique_id=529532953]
