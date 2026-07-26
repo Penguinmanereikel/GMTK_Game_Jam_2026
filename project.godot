@@ -74,6 +74,7 @@ ContinueDialogue={
 2d_physics/layer_3="Dragables"
 2d_physics/layer_4="DragToAreas"
 2d_physics/layer_5="Walls"
+2d_physics/layer_6="Clickables"
 
 [rendering]
 

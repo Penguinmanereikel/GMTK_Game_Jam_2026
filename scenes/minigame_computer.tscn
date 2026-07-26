@@ -8,9 +8,44 @@
 script = ExtResource("1_3yflv")
 
 [node name="Computer" type="Sprite2D" parent="." unique_id=1625511935]
-position = Vector2(217, 179)
+position = Vector2(461, 454)
+scale = Vector2(3, 3)
 texture = ExtResource("2_2ied5")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1014451191]
-position = Vector2(281, 63)
+[node name="Window" type="Node2D" parent="." unique_id=1192966468]
+position = Vector2(666, 142)
+
+[node name="Sprite2D" type="Sprite2D" parent="Window" unique_id=1014451191]
+position = Vector2(0, -8)
+scale = Vector2(3, 3)
 texture = ExtResource("3_yyx45")
+metadata/_edit_lock_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="Window" unique_id=1427913355]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -284.5
+offset_right = 284.5
+offset_bottom = 27.0
+grow_horizontal = 2
+rounded = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Window" unique_id=390534288]
+offset_left = -280.0
+offset_top = -33.0
+offset_right = 30.0
+offset_bottom = -10.0
+text = "Delete files to make space for download"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Files" type="Node2D" parent="." unique_id=932499221]
+
+[node name="Marker_TL" type="Marker2D" parent="." unique_id=1903781873]
+position = Vector2(383, 233)
+
+[node name="Marker_BR" type="Marker2D" parent="." unique_id=336599541]
+position = Vector2(933, 502)
