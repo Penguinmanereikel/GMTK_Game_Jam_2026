@@ -1,25 +1,23 @@
 [gd_scene format=3 uid="uid://cmlacm1bvnj67"]
 
 [ext_resource type="Script" uid="uid://dgfy2oobbsvw5" path="res://scripts/file_icon.gd" id="1_j7gaj"]
-[ext_resource type="Texture2D" uid="uid://dbf5mytsnda5" path="res://assets/File.png" id="2_j7gaj"]
+[ext_resource type="Texture2D" uid="uid://hieh4mx6525u" path="res://icon.svg" id="1_ymxed"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prmf7"]
-size = Vector2(44, 40)
 
 [node name="FileIcon" type="Node2D" unique_id=1536751551]
 script = ExtResource("1_j7gaj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=668493428]
-texture_filter = 1
-scale = Vector2(4, 4)
-texture = ExtResource("2_j7gaj")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ymxed")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=558463866]
 collision_layer = 32
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1453026559]
-position = Vector2(22, -22)
+position = Vector2(26, -26)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_prmf7")
 

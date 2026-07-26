@@ -1,30 +1,8 @@
 [gd_scene format=3 uid="uid://dd04n2yw728m"]
 
 [ext_resource type="Script" uid="uid://cwlxb28d5kryp" path="res://scripts/minigame_storage.gd" id="1_0m0e6"]
-[ext_resource type="Theme" uid="uid://dfvqo2s705px3" path="res://scenes/theme.tres" id="3_td5v7"]
 
 [node name="Minigame_Storage" type="Node2D" unique_id=1705277425 groups=["ConversationStarters"]]
 script = ExtResource("1_0m0e6")
 
 [node name="Packages" type="Node2D" parent="." unique_id=841165303]
-
-[node name="Marker_L" type="Marker2D" parent="." unique_id=757520391]
-position = Vector2(50, -89)
-
-[node name="Marker_R" type="Marker2D" parent="." unique_id=609410415]
-position = Vector2(1119, -89)
-
-[node name="Timer" type="Timer" parent="." unique_id=273049165]
-wait_time = 0.25
-
-[node name="Label" type="Label" parent="." unique_id=1585524146]
-offset_left = 317.0
-offset_top = 175.0
-offset_right = 895.0
-offset_bottom = 269.0
-theme = ExtResource("3_td5v7")
-theme_override_font_sizes/font_size = 50
-text = "Catch 50 boxes"
-
-[connection signal="timeout" from="Timer" to="." method="spawn_box"]
-[connection signal="timeout" from="Timer" to="." method="start_timer"]
