@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://djtql0r4svmv3"]
 
 [ext_resource type="Script" uid="uid://cgecqf6dcjkdy" path="res://scripts/minigame_cooking.gd" id="1_abmuv"]
-[ext_resource type="Texture2D" uid="uid://ctug0vf7fq8dt" path="res://assets/ProgressBar.png" id="1_ls78q"]
-[ext_resource type="Texture2D" uid="uid://doynvd3eoh7qy" path="res://assets/arrow.png" id="2_7cwmg"]
+[ext_resource type="Texture2D" uid="uid://druvwnmyc8iaw" path="res://assets/ToasterOvenTimer.png" id="2_dtu5m"]
+[ext_resource type="Texture2D" uid="uid://dqhipx70i8mwm" path="res://assets/ToasterOvenPointer.png" id="3_573ag"]
+[ext_resource type="Texture2D" uid="uid://w1s4tj0k5o78" path="res://assets/ToasterOven.png" id="4_b4u5t"]
 
 [sub_resource type="Curve" id="Curve_abmuv"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.7484535, 0.32500005), 1.0870687, 1.0870687, 0, 0, Vector2(0.89072156, 0.89), 2.8129961, 2.8129961, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -23,21 +24,23 @@ movement_curve = SubResource("Curve_abmuv")
 
 [node name="Progress Bar" type="Sprite2D" parent="." unique_id=1623159323]
 texture_filter = 1
-position = Vector2(573.5, 109.00001)
-scale = Vector2(6.48125, 0.9375)
-texture = ExtResource("1_ls78q")
+position = Vector2(572.518, 46.034996)
+scale = Vector2(20, 10)
+texture = ExtResource("2_dtu5m")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=559506730]
-position = Vector2(1.5, -122)
+position = Vector2(0.5180054, -184.96501)
 curve = SubResource("Curve2D_7cwmg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=702645350]
-position = Vector2(77, 258)
+position = Vector2(694.79596, 258)
+progress = 617.7955
 
 [node name="Arrow" type="Sprite2D" parent="Path2D/PathFollow2D" unique_id=1809768066]
 texture_filter = 1
 position = Vector2(0.5, -8)
-texture = ExtResource("2_7cwmg")
+scale = Vector2(8, 8)
+texture = ExtResource("3_573ag")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=817732093]
 position = Vector2(910, 519)
@@ -45,5 +48,15 @@ position = Vector2(910, 519)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=596314997]
 shape = SubResource("RectangleShape2D_prmf7")
 metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=125679999]
+layer = -1
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=2047152520]
+texture_filter = 1
+position = Vector2(589.00006, 342)
+scale = Vector2(20, 20)
+texture = ExtResource("4_b4u5t")
 
 [connection signal="input_event" from="Area2D" to="." method="clicked_button"]
