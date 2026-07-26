@@ -2,13 +2,25 @@
 
 [ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_i80ny"]
 [ext_resource type="Script" uid="uid://n0w4old1hqg3" path="res://scripts/server_room.gd" id="2_rmg4d"]
+[ext_resource type="Texture2D" uid="uid://c6vut72pevbtb" path="res://assets/Door.png" id="3_bh7yx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmg4d"]
-size = Vector2(174, 136)
+size = Vector2(314, 356)
 
-[node name="ServerRoom" unique_id=803219588 groups=["Interactables"] instance=ExtResource("1_i80ny")]
+[node name="ServerRoom" unique_id=803219588 instance=ExtResource("1_i80ny")]
 script = ExtResource("2_rmg4d")
 
+[node name="Sprite2D" parent="." index="0" unique_id=404344015]
+texture_filter = 1
+scale = Vector2(10, 10)
+texture = ExtResource("3_bh7yx")
+
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
-position = Vector2(0, 58)
+position = Vector2(1, -12)
 shape = SubResource("RectangleShape2D_rmg4d")
+
+[node name="Label" parent="Control" parent_id_path=PackedInt32Array(1289585158) index="0" unique_id=529532953]
+offset_left = -73.0
+offset_top = -253.0
+offset_right = 73.0
+offset_bottom = -159.9999
