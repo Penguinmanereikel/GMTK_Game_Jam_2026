@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://ciuksyfs1xd4e" path="res://assets/sfx/cooking_ding.wav" id="6_7glin"]
 [ext_resource type="AudioStream" uid="uid://d2mtolfce7bvm" path="res://assets/sfx/mini_oven_working.ogg" id="7_lgif4"]
 [ext_resource type="AudioStream" uid="uid://c0en747hefpt" path="res://assets/sfx/failure.wav" id="8_nesk6"]
+[ext_resource type="Texture2D" uid="uid://b43nyiuh3peb" path="res://assets/PizzaRaw.png" id="9_lgif4"]
 
 [sub_resource type="Curve" id="Curve_abmuv"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.6236559, 0.49038458), 1.7687684, 1.7687684, 0, 0, Vector2(0.702509, 0.7297297), 2.5739357, 2.5739357, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -78,5 +79,12 @@ texture_filter = 1
 position = Vector2(959, 422)
 scale = Vector2(20, 20)
 texture = ExtResource("5_573ag")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=327002925]
+z_index = -2
+texture_filter = 1
+position = Vector2(490, 320)
+scale = Vector2(19.699999, 16.273808)
+texture = ExtResource("9_lgif4")
 
 [connection signal="input_event" from="Area2D" to="." method="clicked_button"]
