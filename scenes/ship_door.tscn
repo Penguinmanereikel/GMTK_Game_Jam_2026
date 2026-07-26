@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b48j7dkaxm23"]
+
+[ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_2xdsw"]
+[ext_resource type="Script" uid="uid://m2xkklfqej2n" path="res://scripts/ship_door.gd" id="2_gcwd6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcwd6"]
+size = Vector2(307, 292)
+
+[node name="ShipDoor" unique_id=803219588 instance=ExtResource("1_2xdsw")]
+script = ExtResource("2_gcwd6")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
+position = Vector2(0, 136)
+shape = SubResource("RectangleShape2D_gcwd6")

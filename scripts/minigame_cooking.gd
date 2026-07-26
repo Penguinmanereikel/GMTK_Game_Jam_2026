@@ -1,14 +1,14 @@
 extends Node2D
 
-signal minigame_finished(id)
+signal end_minigame(id)
 
 var running: int = false
 var tween: Tween
 @export var movement_curve: Curve
-#
-#func _process(_delta):
-	#if $Path2D/PathFollow2D.progress_ratio >= 1.0:
-		#fail()
+
+func _process(_delta):
+	if $Path2D/PathFollow2D.progress_ratio >= 1.0:
+		fail()
 
 func clicked_button(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -33,7 +33,7 @@ func move_arrow(pos):
 
 func finish():
 	print("Win")
-	minigame_finished.emit("cooking_done")
+	end_minigame.emit("Cooking")
 
 func fail():
 	print("Fail")

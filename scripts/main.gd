@@ -1,8 +1,11 @@
 extends Node2D
 
-var MINIGAME_DICT: Dictionary = {
+@onready var MINIGAME_DICT: Dictionary = {
 	"MailRoom": $Minigame/Minigame_Mail,
-	"CardSwipe": $Minigame/Minigame_Card
+	"CardSwipe": $Minigame/Minigame_Card,
+	"Cooking": $Minigame/Minigame_Cooking,
+	"Storage": $Minigame/Minigame_Storage,
+	"Computer": $Minigame/Minigame_Computer
 }
 var game_over: int
 
@@ -10,12 +13,17 @@ var game_over: int
 func _ready():
 	wire_up_stairs_signals()
 	wire_up_conversation_starters()
-	start_dialogue('StartGame')
+	start_game()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if game_over and Input.is_key_pressed(KEY_SPACE):
 		get_tree().reload_current_scene()
+		
+func start_game():
+	$MusicManager.play_music("Gameplay")
+	start_dialogue('StartGame')
+	$LevelMap.update_interactables('init')
 
 func wire_up_stairs_signals():
 	for stairs_scene in $LevelMap/StairsSet.get_children():
@@ -37,13 +45,13 @@ func wire_up_conversation_starters():
 		node.connect('start_dialogue', start_dialogue)
 	
 func start_minigame(id):
-	var minigame_scene = MINIGAME_DICT[id]
-	var minigame = minigame_scene.instantiate()
-	$Minigame.add_child(minigame)
+	var minigame_scene: Node2D = MINIGAME_DICT[id]
+	minigame_scene.visible = true
 	Globals.minigame_open = true
 	
 func end_minigame(id):
-	$Minigame.get_child(0).queue_free()
+	var minigame_scene:Node2D = MINIGAME_DICT[id]
+	minigame_scene.visible = false
 	Globals.minigame_open = false
 	$LevelMap.update_interactables(id)
 		

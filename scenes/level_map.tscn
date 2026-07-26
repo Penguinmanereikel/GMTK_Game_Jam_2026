@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cnwyuh3lwwlfm" path="res://scenes/it_guy.tscn" id="8_ublle"]
 [ext_resource type="PackedScene" uid="uid://4ij5ex2nck18" path="res://scenes/server_room.tscn" id="9_8v2yb"]
 [ext_resource type="PackedScene" uid="uid://djpuggsxfjfa3" path="res://scenes/janitor.tscn" id="10_e6xmq"]
+[ext_resource type="PackedScene" uid="uid://b0n88o2uv0epq" path="res://scenes/ceo.tscn" id="11_2iehp"]
+[ext_resource type="PackedScene" uid="uid://b48j7dkaxm23" path="res://scenes/ship_door.tscn" id="12_jbwni"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_26e65"]
 
@@ -164,6 +166,8 @@ tile_map_data = PackedByteArray("AAD//wIAAAAJAAEAAAD//wMAAAAJAAEAAAD//wQAAAAJAAE
 tile_set = SubResource("TileSet_28enl")
 metadata/_edit_lock_ = true
 
+[node name="Decorations" type="Node2D" parent="Building" unique_id=1850341136]
+
 [node name="Stairs" type="TileMapLayer" parent="Building" unique_id=1113645924]
 texture_filter = 1
 scale = Vector2(8, 8)
@@ -218,16 +222,22 @@ connected = NodePath("../Stairs4C")
 position = Vector2(1800, 1967)
 
 [node name="Mechanic" parent="." unique_id=1329677629 instance=ExtResource("6_28enl")]
-position = Vector2(2423, 1153)
+position = Vector2(2423, 1152)
 
 [node name="Oven" parent="." unique_id=685812335 instance=ExtResource("7_4mfww")]
 position = Vector2(2266, 574)
 
 [node name="ITGuy" parent="." unique_id=28978958 instance=ExtResource("8_ublle")]
-position = Vector2(4174, 603)
+position = Vector2(4171, 564)
 
 [node name="ServerRoom" parent="." unique_id=1615349046 instance=ExtResource("9_8v2yb")]
 position = Vector2(4841, 1282)
 
 [node name="Janitor" parent="." unique_id=1503364707 instance=ExtResource("10_e6xmq")]
-position = Vector2(4327, 1959)
+position = Vector2(4327, 1958)
+
+[node name="CEO" parent="." unique_id=780056653 instance=ExtResource("11_2iehp")]
+position = Vector2(222, -125)
+
+[node name="ShipDoor" parent="." unique_id=483014493 instance=ExtResource("12_jbwni")]
+position = Vector2(7763, 101)

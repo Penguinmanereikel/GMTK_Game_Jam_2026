@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://b0n88o2uv0epq"]
 
 [ext_resource type="PackedScene" uid="uid://dyqrywaunyn1d" path="res://scenes/interactable.tscn" id="1_47x8t"]
+[ext_resource type="Script" uid="uid://dptjthk1luyq3" path="res://scripts/ceo.gd" id="2_vjl82"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47x8t"]
 size = Vector2(254, 391)
 
 [node name="CEO" unique_id=803219588 groups=["ConversationStarters"] instance=ExtResource("1_47x8t")]
+script = ExtResource("2_vjl82")
 
 [node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(585417938) index="0" unique_id=753043864]
 position = Vector2(0, 185.5)

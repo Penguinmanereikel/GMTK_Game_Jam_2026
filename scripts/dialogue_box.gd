@@ -19,6 +19,74 @@ const CONVERSATION_DICT = {
 		#["Player", "I should be able to find something upstairs in the storage room..."],
 		["END", ""],
 	],
+	"JanitorStart": [
+		["Player", "Hey, Mister uh... Janitor... guy..."],
+		#["Janitor", "It's Morris."],
+		#["Player", "Right, you wouldn't happen to have something super heavy that we don't need in storage, do you?"],
+		#["Janitor", "Maybe. What's it to you?"],
+		#["Player", "It's just that I really need it. Could you help me out?"],
+		#["Janitor", "Only if you can help me with all these boxes."],
+		#["Player", "Ugh, fine, but make it quick."],
+		["MINIGAME", "Storage"]
+	],
+	"JanitorEnd": [
+		["Player", "Great. Got a huge box full of metal junk. But I'll need more"],
+		#["Player", "Maybe I can find something from the ship mechanic. He should be upstairs."],
+		["END", ""]
+	],
+	"MechanicStart": [
+		["Player", "Hey, man. I need your help."],
+		#["Mechanic", "Hey, it's you! Big day, huh? All our hard work ready to pay off."],
+		#["Player", "Right... Yeah, big day..."],
+		#["Player", "Anyway, I have a favor to ask. Could you get me something really heavy?"],
+		#["Mechanic", "How heavy?"],
+		#["Player", "As heavy as you can get."],
+		#["Mechanic", "Hmm... I might have something. But I can't just give you ship parts for free."],
+		#["Mechanic", "Tell you what. How about you get me some pizza from the break room, and I'll give it to you, no questions asked"],
+		#["Player", "Fine. I'll go upstairs and get you a pizza."],
+		["END", ""]
+	],
+	"MechanicEnd": [
+		["Mechanic", "Heck, yeah. Pizza!"],
+		#["Player", "And what about what I need?"],
+		#["Mechanic", "Yeah, yeah. A deal's a deal. Here you go, a loaded liquid tank. Should be heavy enough"],
+		#["Player", "That's pretty good, but I'm gonna need at least one more thing."],
+		#["Player", "The next heaviest thing here is probably going to be an old server from the server room."],
+		#["Player", "I'll have to go upstairs to get the code for the door."],
+		["END", ""]
+	],
+	"ITGuyStart": [
+		["ITGuy", "Oh, hey. You need something?"],
+		#["Player", "In fact, I do. I need access to the server room."],
+		#["ITGuy", "Well, the code is randomized every day, so I have to check on my email."],
+		#["Player", "And what does it say?"],
+		#["ITGuy", "Hold on... I gotta update my email app, but it's giving me issues."],
+		#["ITGuy", "Let's see.... it says my computer does not have enough space and requires me to make space..."],
+		#["Player", "Let me have a look! I'll get this done quicker!"],
+		["MINIGAME", "Computer"]
+	],
+	"ITGuyEnd": [
+		["Player", "Done! And I got the code! Now I just need to go downstairs and open it!"],
+		["END", ""]
+	],
+	"ServerRoom": [
+		["Player", "Oh, nuts. This thing is heeeeaaaavyyyy. This should be good for weight."],
+		#["Player", "Now, I know that only the astronauts and certain company VIPs are allowed to even open the ship door."],
+		#["Player", "So I'll need a VIP card to get on."],
+		#["Player", "The CEO should have one, and he should be on the roof right now."],
+		["END", ""]
+	],
+	"CEOStart": [
+		["Player", "Good morning, sir!"],
+		#["CEO", "Are you the champagne boy?"],
+		#["Player", "Uh, no, sir. I'm...."],
+		#["CEO", "I want my champagne before I talk to anyone."],
+		#["Player", "But sir...."],
+		#["CEO", "It's a big day for me, and I want to celebrate it."],
+		#["CEO", "I want my champagne. I ordered it yesterday, it should be here now."],
+		#["Player", "Ugh, I'll... go back to the ground floor and check the mail room..."],
+		["END", ""]
+	],
 	"MailGuyStart": [
 		["Player", "Hey, do you have the champagne delivery?"],
 		#["MailGuy", "Uh, yeah. I think it's here somewhere..."],
@@ -26,16 +94,31 @@ const CONVERSATION_DICT = {
 		#["MailGuy", "Uh, sure, but, I gotta sort through all this junk mail, and fanmail, and federal notices, and..."],
 		#["Player", "ARGH! JUST LET ME DO IT!"],
 		["MINIGAME", "MailRoom"]
-	]
+	],
+	"MailGuyEnd": [
+		["Player", "Got it! Now I just have to bring this back up to the CEO."],
+		["END", ""]
+	],
+	"CEOEnd": [
+		["Player", "Your champagne, sir?"],
+		#["CEO", "Perfect!"],
+		#["CEO", "glug glug glug"],
+		#["Player", "Uh, boss?"],
+		#["CEO", "glug glug glug"],
+		#["CEO", "Yeah! I'm launching a rocket today!"],
+		#["Player", "Uh... let me check nick it from his VIP card from his back pocket"],
+		#["Player", "Got it. Now I can open the rocket doors!"],
+		#["Player", "The rocket should be all the way on the right then..."],
+		["END", ""]
+	],
 }
 const CONVERSATION_COLORS = {
 	"Player": Color(0.896, 0.715, 0.0, 1.0),
 	"MailGuy": Color(0.0, 0.67, 0.738, 1.0),
 	"Janitor": Color(0.843, 0.419, 0.0, 1.0),
 	"Mechanic": Color(0.088, 0.488, 1.0, 1.0),
-	"IT": Color(0.733, 0.0, 0.708, 1.0),
-	"Guard": Color(0.959, 0.023, 0.0, 1.0),
-	"CEO": Color(0.0, 0.869, 0.246, 1.0),
+	"ITGuy": Color(0.733, 0.0, 0.708, 1.0),
+	"CEO": Color(0.969, 0.0, 0.21, 1.0),
 }
 var active_convo: Array
 var active: bool

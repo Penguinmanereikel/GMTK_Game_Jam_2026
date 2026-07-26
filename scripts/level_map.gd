@@ -1,22 +1,40 @@
 extends Node2D
 
 func update_interactables(id):
-	if id == "storage_minigame_done":
-		pass
+	if id == 'init':
+		$Janitor.process_mode = Node.PROCESS_MODE_INHERIT
+		$MailGuy.process_mode = Node.PROCESS_MODE_DISABLED
+		$Mechanic.process_mode = Node.PROCESS_MODE_DISABLED
+		$Oven.process_mode = Node.PROCESS_MODE_DISABLED
+		$ITGuy.process_mode = Node.PROCESS_MODE_DISABLED
+		$ServerRoom.process_mode = Node.PROCESS_MODE_DISABLED
+		$CEO.process_mode = Node.PROCESS_MODE_DISABLED
+		$ShipDoor.process_mode = Node.PROCESS_MODE_DISABLED
+	if id == "Storage":
+		$Janitor.process_mode = Node.PROCESS_MODE_DISABLED
+		$Mechanic.process_mode = Node.PROCESS_MODE_INHERIT
 	if id == "mechanic_conversation":
-		pass
-	if id == "cooking_minigame_done":
-		pass
+		$Mechanic.process_mode = Node.PROCESS_MODE_DISABLED
+		$Oven.process_mode = Node.PROCESS_MODE_INHERIT
+	if id == "Cooking":
+		$Oven.process_mode = Node.PROCESS_MODE_DISABLED
+		$Mechanic.process_mode = Node.PROCESS_MODE_INHERIT
 	if id == "mechanic_conversation2":
-		pass
-	if id == "computer_minigame_done":
-		pass
-	if id == "serverroom":
-		pass
+		$Mechanic.process_mode = Node.PROCESS_MODE_DISABLED
+		$ITGuy.process_mode = Node.PROCESS_MODE_INHERIT
+	if id == "Computer":
+		$ITGuy.process_mode = Node.PROCESS_MODE_DISABLED
+		$ServerRoom.process_mode = Node.PROCESS_MODE_INHERIT
+	if id == "ServerRoom":
+		$ServerRoom.process_mode = Node.PROCESS_MODE_DISABLED
+		$CEO.process_mode = Node.PROCESS_MODE_INHERIT
 	if id == "ceo_conversation":
-		pass
-	if id == "mailroom_minigame_done":
-		pass
+		$CEO.process_mode = Node.PROCESS_MODE_DISABLED
+		$MailGuy.process_mode = Node.PROCESS_MODE_INHERIT
+	if id == "MailRoom":
+		$MailGuy.process_mode = Node.PROCESS_MODE_DISABLED
+		$CEO.process_mode = Node.PROCESS_MODE_INHERIT
 	if id == "ceo_conversation2":
-		pass
+		$CEO.process_mode = Node.PROCESS_MODE_INHERIT
+		$ShipDoor.process_mode = Node.PROCESS_MODE_INHERIT
 	

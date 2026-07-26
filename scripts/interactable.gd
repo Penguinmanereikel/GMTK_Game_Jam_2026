@@ -1,6 +1,8 @@
 class_name Interactable
 extends Node2D
 
+signal update_interactables(id)
+
 var active: bool = false
 
 func _ready() -> void:
