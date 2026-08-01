@@ -5,7 +5,6 @@
 [ext_resource type="Theme" uid="uid://dfvqo2s705px3" path="res://scenes/theme.tres" id="3_hvmm2"]
 
 [node name="DialogueBox" type="Node2D" unique_id=772792991]
-position = Vector2(587, 515)
 script = ExtResource("1_fu8b5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1188538048]
@@ -22,23 +21,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -520.0
-offset_top = -87.0
-offset_right = 520.0
-offset_bottom = 87.0
+offset_left = -504.0
+offset_top = -92.0
+offset_right = 452.0
+offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1223600470]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.0019230769
-anchor_top = -0.028735632
-anchor_right = 0.9682692
-anchor_bottom = 0.97126436
+anchor_left = 0.013461539
+anchor_top = -0.01408449
+anchor_right = 1.001046
+anchor_bottom = 1.0633802
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("3_hvmm2")

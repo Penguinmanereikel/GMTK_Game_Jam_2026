@@ -65,7 +65,8 @@ func win():
 	Globals.overscreen_present = true
 	print("Win")
 	$MusicManager/WinMusic.play()
-	print("Show Win Screen")
+	$WinScreen.visible = true
+	$Label.visible = true
 		
 func lose():
 	Globals.overscreen_present = true

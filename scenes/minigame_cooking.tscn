@@ -7,8 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://dwmctvddputf5" path="res://assets/ToasterOvenKnob.png" id="5_573ag"]
 [ext_resource type="AudioStream" uid="uid://ciuksyfs1xd4e" path="res://assets/sfx/cooking_ding.wav" id="6_7glin"]
 [ext_resource type="AudioStream" uid="uid://d2mtolfce7bvm" path="res://assets/sfx/mini_oven_working.ogg" id="7_lgif4"]
+[ext_resource type="Texture2D" uid="uid://cwc033f4knu3g" path="res://assets/black_background.png" id="7_mmfha"]
 [ext_resource type="AudioStream" uid="uid://c0en747hefpt" path="res://assets/sfx/failure.wav" id="8_nesk6"]
 [ext_resource type="Texture2D" uid="uid://b43nyiuh3peb" path="res://assets/PizzaRaw.png" id="9_lgif4"]
+[ext_resource type="Texture2D" uid="uid://t4csurk5s484" path="res://assets/PizzaCooked.png" id="9_m8poy"]
+[ext_resource type="Texture2D" uid="uid://b53htbdl3bwaq" path="res://assets/PizzaBurnt.png" id="10_60viv"]
 
 [sub_resource type="Curve" id="Curve_abmuv"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.6236559, 0.49038458), 1.7687684, 1.7687684, 0, 0, Vector2(0.702509, 0.7297297), 2.5739357, 2.5739357, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -22,6 +25,23 @@ point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prmf7"]
 size = Vector2(140, 138)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_prmf7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_lgif4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_m8poy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_60viv")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Minigame_Cooking" type="Node2D" unique_id=1236750143 groups=["ConversationStarters"]]
 script = ExtResource("1_abmuv")
@@ -65,6 +85,19 @@ stream = ExtResource("7_lgif4")
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Sounds" unique_id=85021745]
 stream = ExtResource("8_nesk6")
 
+[node name="InsideBackground" type="Sprite2D" parent="." unique_id=1409181168]
+z_index = -1
+position = Vector2(574.00006, 338.5)
+scale = Vector2(2.930556, 2.6111112)
+texture = ExtResource("7_mmfha")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1331199337]
+z_index = -1
+texture_filter = 1
+position = Vector2(490, 320)
+scale = Vector2(19.699999, 16.273808)
+sprite_frames = SubResource("SpriteFrames_prmf7")
+
 [node name="Oven" type="Sprite2D" parent="." unique_id=2047152520]
 z_index = -1
 texture_filter = 1
@@ -79,12 +112,5 @@ texture_filter = 1
 position = Vector2(959, 422)
 scale = Vector2(20, 20)
 texture = ExtResource("5_573ag")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=327002925]
-z_index = -2
-texture_filter = 1
-position = Vector2(490, 320)
-scale = Vector2(19.699999, 16.273808)
-texture = ExtResource("9_lgif4")
 
 [connection signal="input_event" from="Area2D" to="." method="clicked_button"]

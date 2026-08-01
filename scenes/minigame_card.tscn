@@ -13,32 +13,50 @@ script = ExtResource("1_k1r1b")
 lower_time_range = 750
 upper_time_range = 850
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=562964476]
+[node name="DisplaySprite" type="Sprite2D" parent="." unique_id=562964476]
 texture_filter = 1
-position = Vector2(551.00006, 313)
-scale = Vector2(7, 7)
+position = Vector2(551.00006, 414)
+scale = Vector2(8, 8)
 texture = ExtResource("2_ln8rf")
 
 [node name="Card" parent="." unique_id=448617300 instance=ExtResource("2_g7krk")]
 z_index = -1
-position = Vector2(194, 310)
+position = Vector2(187, 365)
+scale = Vector2(2, 2)
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=564396483]
+[node name="KeypadSprite" type="Sprite2D" parent="." unique_id=564396483]
 z_index = -2
 texture_filter = 1
-position = Vector2(549.99994, 299.99997)
-scale = Vector2(7, 7)
+position = Vector2(549.99994, 400.99997)
+scale = Vector2(8, 8)
 texture = ExtResource("4_jdtbm")
 
-[node name="Label" type="Label" parent="." unique_id=527316427]
+[node name="Display" type="Control" parent="." unique_id=190074479]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 223.0
+offset_top = 74.0
+offset_right = 885.0
+offset_bottom = 182.0
+
+[node name="Label" type="Label" parent="Display" unique_id=527316427]
 texture_filter = 1
-offset_left = 268.0
-offset_top = 44.0
-offset_right = 411.0
-offset_bottom = 67.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.1500001
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -332.5
+offset_bottom = -70.20001
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(2, 2)
 theme = ExtResource("5_i24k2")
+theme_override_font_sizes/font_size = 28
 text = "Slide Card"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Node" type="Node" parent="." unique_id=255509494]
 

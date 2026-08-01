@@ -8,6 +8,13 @@ var tween: Tween
 @export var movement_curve: Curve
 
 func _process(_delta):
+	if $Path2D/PathFollow2D.progress_ratio < 0.62:
+		$AnimatedSprite2D.frame = 0
+	elif $Path2D/PathFollow2D.progress_ratio >= 0.62 and $Path2D/PathFollow2D.progress_ratio <= 0.68:
+		$AnimatedSprite2D.frame = 1
+	elif $Path2D/PathFollow2D.progress_ratio > 0.68:
+		$AnimatedSprite2D.frame = 2
+		
 	if $Path2D/PathFollow2D.progress_ratio >= 1.0:
 		fail()
 
@@ -35,11 +42,9 @@ func move_arrow(pos):
 
 func start():
 	print("Started minigame, minigame cooking")
-	visible = true
 
 func finish():
 	print("Finished minigame, minigame cooking")
-	visible = false
 	$Sounds/AudioStreamPlayer2.stop()
 	$Sounds/AudioStreamPlayer.play()
 	start_dialogue.emit("Oven")

@@ -14,4 +14,5 @@ func _process(_delta):
 			position.x = new_x
 
 func mouse_left():
-	unclicked.emit(self)
+	if is_dragging:
+		unclicked.emit(self)

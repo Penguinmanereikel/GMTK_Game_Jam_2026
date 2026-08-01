@@ -16,6 +16,8 @@
 [ext_resource type="AudioStream" uid="uid://cjg3k8xn1wscg" path="res://assets/music/gameplay.ogg" id="9_eb6dy"]
 [ext_resource type="AudioStream" uid="uid://boxcaidqlyfgv" path="res://assets/music/win.ogg" id="10_trceg"]
 [ext_resource type="AudioStream" uid="uid://6yvb0xjca2vs" path="res://assets/music/gameover.ogg" id="11_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://cwc033f4knu3g" path="res://assets/black_background.png" id="17_dp3eg"]
+[ext_resource type="Theme" uid="uid://dfvqo2s705px3" path="res://scenes/theme.tres" id="18_0ld40"]
 
 [node name="Main" type="Node2D" unique_id=311123939]
 script = ExtResource("1_yk4e7")
@@ -24,6 +26,7 @@ script = ExtResource("1_yk4e7")
 layer = -1
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1492953745]
+texture_filter = 1
 position = Vector2(4896.0005, 317)
 scale = Vector2(24.46007, 13.31173)
 texture = ExtResource("2_jkv2x")
@@ -44,7 +47,6 @@ texture = ExtResource("4_jbj1t")
 
 [node name="Player" parent="." unique_id=557363118 instance=ExtResource("1_iu00y")]
 position = Vector2(582, 2048)
-playerSpeed = 1000
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=111282740]
 position = Vector2(0, -97)
@@ -69,7 +71,6 @@ visible = false
 
 [node name="Minigame_Storage" parent="Minigame" unique_id=1705277425 instance=ExtResource("8_trceg")]
 visible = false
-target = 2
 
 [node name="Minigame_Computer" parent="Minigame" unique_id=1612808720 instance=ExtResource("9_a8y0u")]
 visible = false
@@ -90,6 +91,23 @@ stream = ExtResource("11_a8y0u")
 parameters/looping = true
 
 [node name="Timer" type="Timer" parent="." unique_id=996150503]
+
+[node name="WinScreen" type="Sprite2D" parent="." unique_id=653213333]
+visible = false
+position = Vector2(589, 447.5)
+scale = Vector2(5.0902777, 6.5246916)
+texture = ExtResource("17_dp3eg")
+
+[node name="Label" type="Label" parent="." unique_id=863273409]
+visible = false
+texture_filter = 1
+offset_left = 385.0
+offset_top = 351.0
+offset_right = 713.0
+offset_bottom = 406.0
+theme = ExtResource("18_0ld40")
+theme_override_font_sizes/font_size = 72
+text = "You Win!"
 
 [connection signal="minigame_start" from="LevelMap" to="." method="start_minigame"]
 [connection signal="end_dialogue" from="Conversation/DialogueBox" to="." method="end_dialogue"]

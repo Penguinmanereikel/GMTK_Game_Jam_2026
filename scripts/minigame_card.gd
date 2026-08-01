@@ -27,13 +27,13 @@ func unclicked_object(obj):
 		if elapsed_time >= lower_time_range and elapsed_time <= upper_time_range:
 			finish()
 		elif elapsed_time < lower_time_range:
-			$Label.text = "Swipe faster"
+			$Display/Label.text = "Swipe faster"
 			$Node/AudioStreamPlayer.play()
 		elif elapsed_time > upper_time_range:
-			$Label.text = "Swipe slower"
+			$Display/Label.text = "Swipe slower"
 			$Node/AudioStreamPlayer.play()
 	else:
-		$Label.text = "Swipe all the way"
+		$Display/Label.text = "Swipe all the way"
 		$Node/AudioStreamPlayer.play()
 	$Card.position = start_pos
 
